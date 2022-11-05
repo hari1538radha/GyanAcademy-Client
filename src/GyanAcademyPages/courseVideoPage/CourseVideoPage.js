@@ -14,12 +14,12 @@ import icon from "./asserts/Icon.svg";
 import vedioPlayer from "./asserts/vedioPlayer.svg";
 
 const CourseVideoPage = () => {
-  const learningTags =
-    courses.courses[0].courseAvailable[0].courseVideos[0].learningTags;
-  console.log(learningTags);
+  // const learningTags = courses.courses[0].courseAvailable[0].courseVideos[0].learningTags;
+  // console.log(learningTags);
   let passedData = useLocation();
   passedData = passedData.state;
   const tasks = passedData.tasks[0].tasks;
+  console.log(passedData)
   console.log(tasks);
   const onClickHandler = (event) => {
     console.log(event);
@@ -103,8 +103,8 @@ const CourseVideoPage = () => {
             <p className="w-[340px] h-14 text-[30px] font-semibold mb-6">
               You'll learn
             </p>
-            <div>
-              {
+            < div>
+             {/* {
                 <div className="w-[50%] flex flex-wrap gap-x-6 gap-y-5">
                   {learningTags.length > 0 &&
                     learningTags.map((obj) => (
@@ -113,7 +113,7 @@ const CourseVideoPage = () => {
                       </div>
                     ))}
                 </div>
-              }
+              } */}
             </div>
           </div>
         </div>

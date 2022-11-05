@@ -9,6 +9,7 @@ const CourseCard = (props) => {
   const Navigate = useNavigate();
   const courseList = props.courseList;
   console.log(courseList);
+
   const handelCoursevideo = (tasks, tutor, description, ratings, title) => {
     Navigate("/coursevideo", {
       state: {
