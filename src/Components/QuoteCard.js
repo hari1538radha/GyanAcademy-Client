@@ -1,6 +1,6 @@
 import React from "react";
 import left_arror from "../GyanAcademyPages/HomePage/asserts/left_arror.png";
-import right_arror from "../GyanAcademyPages/HomePage/asserts/rightarrow.svg";
+import right_arror from "../GyanAcademyPages/HomePage/asserts/right_arror.png";
 import quote from "../GyanAcademyPages/HomePage/asserts/fa-quote-left.png";
 import user from "../GyanAcademyPages/HomePage/asserts/Mask.png";
 
@@ -21,7 +21,7 @@ function Quotecard() {
               The samples form a set of 25 usable pages you can use as is or you
               can add new blocks from UI Kit.{" "}
             </p>
-            <div className=" flex gap-[A17px]">
+            <div className=" flex gap-[17px]">
               <img className="pt-[22px]" src={user} />
               <p className=" pt-[44px] h-[26px] w-[236px] text-[14px] text-[#151439] opacity-[0.7]">
                 Jessey Kirk, designmodo
