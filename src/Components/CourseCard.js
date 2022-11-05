@@ -10,10 +10,11 @@ const CourseCard = (props) => {
   const courseList = props.courseList;
   console.log(courseList);
 
-  const handelCoursevideo = (tasks, tutor, description, ratings, title) => {
+  const handelCoursevideo = (tasks, tutor, description, ratings, title,learningTags) => {
     Navigate("/coursevideo", {
       state: {
         tasks: tasks,
+        learningTags:learningTags,
         tutor: tutor,
         description: description,
         ratings: ratings,

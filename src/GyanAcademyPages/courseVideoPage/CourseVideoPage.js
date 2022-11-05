@@ -19,7 +19,8 @@ const CourseVideoPage = () => {
   let passedData = useLocation();
   passedData = passedData.state;
   const tasks = passedData.tasks[0].tasks;
-  console.log(passedData)
+  const learningTags = passedData.tasks[0].learningTags  
+  console.log(passedData.tasks[0].learningTags    )
   console.log(tasks);
   const onClickHandler = (event) => {
     console.log(event);
@@ -104,7 +105,7 @@ const CourseVideoPage = () => {
               You'll learn
             </p>
             < div>
-             {/* {
+             {
                 <div className="w-[50%] flex flex-wrap gap-x-6 gap-y-5">
                   {learningTags.length > 0 &&
                     learningTags.map((obj) => (
@@ -113,7 +114,7 @@ const CourseVideoPage = () => {
                       </div>
                     ))}
                 </div>
-              } */}
+              }
             </div>
           </div>
         </div>
