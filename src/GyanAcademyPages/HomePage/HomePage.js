@@ -14,6 +14,10 @@ const HomePage = () => {
   const handelPages = () => {
     Navigate("/courselibrary");
   };
+  const HandelFormPage = () => {
+    Navigate("/applicationform");
+  };
+  
   return (
     <div>
       <div className="w-screen h-[670px] pl-[146px] bg-background bg-cover flex justify-between">
@@ -142,10 +146,10 @@ const HomePage = () => {
               </p>
             </div>
             <div className="pt-[38px] inline-flex flex-row gap-[14px]">
-              <button className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] ">
+              <button onClick={HandelFormPage} className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] ">
                 Start now
               </button>
-              <button className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] ">
+              <button  onClick={HandelFormPage}  className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] ">
                 Start Free Trial
               </button>
             </div>
