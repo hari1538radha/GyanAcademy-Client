@@ -1,14 +1,17 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 //components
 import Search from "../../Components/Search";
 import HeaderBanner from "../../Components/HeaderBanner";
 import BackNavigation from "../../Components/BackNavigation";
 import CourseCardContainer from "../../Components/CourseCardContainer";
+import CourseHeader from "../../Components/CourseHeader";
 //asserts
 import bgImg from "./asserts/Banner.svg";
 
 function CoursePage() {
   const Text = "JavaScript";
+  const passedData = useLocation();
   return (
     <div>
       <div>
@@ -25,7 +28,8 @@ function CoursePage() {
           <Search />
         </div>
         <div>
-          <CourseCardContainer />
+          <CourseHeader/>
+          <CourseCardContainer courseList={passedData.state} />
         </div>
       </div>
     </div>

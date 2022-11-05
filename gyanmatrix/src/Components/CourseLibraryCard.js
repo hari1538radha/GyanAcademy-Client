@@ -6,16 +6,16 @@ courses = courses.courses;
 const CourseLibraryCard = () => {
   const Navigate = useNavigate();
   const handelPages = (courseAvailable) => {
-    Navigate("/Courses",{state:courseAvailable});
+    Navigate("/Courses", { state: courseAvailable });
   };
 
   return (
     <div>
-      <div className="w-[100%] h-[1195px] bg-[#BCFFDF] flex-wrap flex">
+      <div className="w-screen pb-32 bg-gradient-to-b from-[#E1F3FF] to-[#E4D7FF] flex-wrap gap-14 flex items-center justify-center">
         {courses.length > 0 &&
           courses.map((obj) => (
             <div className="pt-[55px]">
-              <div className="ml-[129px] w-[356px] h-[236px] shadow-md shadow-gray-300 bg-white rounded-[25px]">
+              <div className="w-[356px] h-[236px] shadow-md shadow-gray-300 bg-white rounded-[25px]">
                 <div
                   className="z-0 relative w-[356px] h-[145px] text-white rounded-t-[25px]"
                   style={{
@@ -41,7 +41,7 @@ const CourseLibraryCard = () => {
                   style={{ color: `${obj.color}` }}
                 >
                   <button
-                    onClick={()=>handelPages(obj.courseAvailable)}
+                    onClick={() => handelPages(obj.courseAvailable)}
                     className="border-[2px] w-[174px] h-[42px] rounded-[25px] shadow-md"
                     style={{ borderColor: `${obj.color}` }}
                   >

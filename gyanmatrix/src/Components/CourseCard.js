@@ -23,10 +23,10 @@ const CourseCard = (props) => {
 
   return (
     <div>
-      <div className="h-[1515px] overflow-y-scroll no-scrollbar">
+      <div className="h-[1515px] w-[800px] flex flex-col items-center justify-center overflow-y-scroll no-scrollbar">
         {courseList.length &&
           courseList.map((obj) => (
-            <div className="flex flex-row max-w-[760px] h-[280px] bg-[#FFFFFF] rounded-[25px] my-[50px]">
+            <div className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl	 bg-[#FFFFFF] rounded-[25px] my-[50px]">
               <img src={preview} className="p-[24px]" />
               <div className="flex flex-col justify-between p-[24px]">
                 <h2 className="border-l-[4px] border-[#9D1C7F] pl-[7px] text-[20px] font-semibold">
@@ -64,7 +64,7 @@ const CourseCard = (props) => {
                       obj.courseName
                     )
                   }
-                  className="border-[2px] w-[174px] h-[42px] rounded-[25px] border-[#9D1C7F] left-[250px] relative"
+                  className="border-[2px] w-[174px] h-[42px] rounded-[25px] border-[#9D1C7F] left-[180px] relative"
                 >
                   Enroll
                 </button>
