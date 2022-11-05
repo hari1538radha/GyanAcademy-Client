@@ -15,9 +15,8 @@ const CourseLibrary = () => {
         <HeaderBanner bgImg={background} BannerText="Course Library" />
       </div>
       <div className="flex flex-col items-center ">
-        
-          <BackNavigation NavigateTo={"/"} Navigation={"Home"} />
-      
+        <BackNavigation Navigation={"Home"} />
+
         <div>
           <Search />
         </div>

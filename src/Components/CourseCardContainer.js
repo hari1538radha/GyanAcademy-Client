@@ -8,7 +8,7 @@ const CardContainer = (props) => {
     <div>
       <div className="flex flex-row mt-[0px]">
         <div>
-          <CourseCard courseList={props.courseList}/>
+          <CourseCard courseList={props.courseList} />
         </div>
         <div>
           <GetStarted />

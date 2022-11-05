@@ -10,7 +10,6 @@ import CourseHeader from "../../Components/CourseHeader";
 import bgImg from "./asserts/Banner.svg";
 
 function CoursePage() {
-  const Text = "JavaScript";
   const passedData = useLocation();
   return (
     <div>
@@ -19,16 +18,13 @@ function CoursePage() {
       </div>
       <div className="flex flex-col justify-center items-center w-screen">
         <div>
-          <BackNavigation
-            NavigateTo={"/courselibrary"}
-            Navigation={"Course Library"}
-          />
+          <BackNavigation Navigation={"Course Library"} />
         </div>
         <div>
           <Search />
         </div>
         <div>
-          <CourseHeader/>
+          <CourseHeader />
           <CourseCardContainer courseList={passedData.state} />
         </div>
       </div>

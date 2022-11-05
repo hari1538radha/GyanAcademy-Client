@@ -14,23 +14,18 @@ import icon from "./asserts/Icon.svg";
 import vedioPlayer from "./asserts/vedioPlayer.svg";
 
 const CourseVideoPage = () => {
-  // const learningTags = courses.courses[0].courseAvailable[0].courseVideos[0].learningTags;
-  // console.log(learningTags);
+  const learningTags =
+    courses.courses[0].courseAvailable[0].courseVideos[0].learningTags;
   let passedData = useLocation();
+
   passedData = passedData.state;
   const tasks = passedData.tasks[0].tasks;
-  const learningTags = passedData.tasks[0].learningTags  
-  console.log(passedData.tasks[0].learningTags    )
   console.log(tasks);
   const onClickHandler = (event) => {
     console.log(event);
     const selectedElement = document.getElementById(
       `${event.target.id}-videos`
     );
-    // const selectedParent = document.getElementById(`${event.target.id}`);
-    // console.log(selectedParent.style.borderTopRigthRadius)
-    // selectedParent.style.borderTopRigthRadius = selectedParent.style.borderTopRigthRadius == "20px" ? "0" :"20px"
-    // console.log(selectedElement.style);
     selectedElement.style.display =
       selectedElement.style.display == "block" ? "none" : "block";
   };
@@ -44,36 +39,29 @@ const CourseVideoPage = () => {
       </div>
       <div className="flex flex-col justify-center items-center w-screen">
         <div>
-          <BackNavigation
-            NavigateTo={"/courses"}
-            Path={path}
-            Navigation={"Javascript"}
-          />
+          <BackNavigation Path={path} Navigation={"Javascript"} />
         </div>
-<div>
-<div className="flex flex-start w-[1170px] ">
-          <h1 className="font-semibold text-[30px] "> {passedData.title}</h1>
+        <div>
+          <div className="flex flex-start w-[1170px] ">
+            <h1 className="font-semibold text-[30px] "> {passedData.title}</h1>
+          </div>
+          <div className="mt-10 flex items-center mb-10">
+            <img className="mr-3" src={userprofile}></img>
+            <p className="mr-10 opacity-60 font-semibold text-[22px]">
+              {passedData.tutor}
+            </p>
+            <img className="mr-3" src={Ratings}></img>
+            <p>{passedData.ratings}</p>
+          </div>
+          <p className="font-medium text-[20px]">{passedData.description}</p>
         </div>
-        <div className="mt-10 flex items-center mb-10">
-          <img className="mr-3" src={userprofile}></img>
-          <p className="mr-10 opacity-60 font-semibold text-[22px]">
-            {passedData.tutor}
-          </p>
-          <img className="mr-3" src={Ratings}></img>
-          <p>{passedData.ratings}</p>
-        </div>
-        <p className="font-medium text-[20px]">{passedData.description}</p>
 
-
-</div>
-        
         <div className=" flex flex-col justify-center items-center mt-16 gap-y-6">
           {tasks.length &&
             tasks.map((obj, index) => (
               <div className="mb-[26px]">
                 <div
                   className="flex cursor-pointer group focus:rounded-none items-center justify-start w-[1168px] border-2 border-gray-200 h-24 rounded-t-[20px]"
-                  
                   id={`index-${index}`}
                   // style={{ borderTopLeftRadius:"20px",borderTopRigthRadius:"20px", focus:"green" }}
                   onClick={(event) => {
@@ -84,12 +72,12 @@ const CourseVideoPage = () => {
                   <p className="font-medium text-[22px]">{obj.taskHeader}</p>
                 </div>
                 <div
-                  className=" focus:block  hidden"
+                  className=" focus:block cursor-pointer hidden"
                   id={`index-${index}-videos`}
                 >
                   {obj.taskItems.length &&
                     obj.taskItems.map((obj) => (
-                      <div className="flex items-center justify-start w-[1168px] border-2 border-gray-200 h-24  last:rounded-b-lg">
+                      <div className="flex items-center justify-start w-[1168px] border-2 border-gray-200 h-24 first:rounded-t-none last:rounded-b-lg">
                         <img
                           className="ml-[35px] mr-[31px]"
                           src={vedioPlayer}
@@ -104,8 +92,8 @@ const CourseVideoPage = () => {
             <p className="w-[340px] h-14 text-[30px] font-semibold mb-6">
               You'll learn
             </p>
-            < div>
-             {
+            <div>
+              {
                 <div className="w-[50%] flex flex-wrap gap-x-6 gap-y-5">
                   {learningTags.length > 0 &&
                     learningTags.map((obj) => (

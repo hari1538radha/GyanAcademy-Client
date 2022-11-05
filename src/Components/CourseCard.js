@@ -7,14 +7,23 @@ import ratings from "../GyanAcademyPages/coursePage/asserts/star.png";
 
 const CourseCard = (props) => {
   const Navigate = useNavigate();
+  console.log(props);
   const courseList = props.courseList;
   console.log(courseList);
 
-  const handelCoursevideo = (tasks, tutor, description, ratings, title,learningTags) => {
+  const handelCoursevideo = (
+    tasks,
+    tutor,
+    description,
+    ratings,
+    title,
+    learningTags
+  ) => {
     Navigate("/coursevideo", {
       state: {
+        courseLists: courseList,
         tasks: tasks,
-        learningTags:learningTags,
+        learningTags: learningTags,
         tutor: tutor,
         description: description,
         ratings: ratings,
@@ -26,7 +35,7 @@ const CourseCard = (props) => {
   return (
     <div>
       <div className=" max-h-[1515px] w-[800px] flex flex-col justify-center overflow-y-scroll no-scrollbar">
-        {courseList.length &&
+        {courseList?.length > 0 &&
           courseList.map((obj) => (
             <div className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl	 bg-[#FFFFFF] rounded-[25px] my-[50px]">
               <img src={preview} className="p-[24px]" />

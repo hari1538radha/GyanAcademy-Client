@@ -6,12 +6,12 @@ import CourseLibrary from "./GyanAcademyPages/courseLibraryPage/courseLibrary";
 import HomePage from "./GyanAcademyPages/HomePage/HomePage";
 //components
 import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/header";
+import Navbar from "./Components/Navbar/NavBar";
 
 function App() {
   return (
     <div className="font-poppins">
-      <Header/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} exact></Route>
         <Route path="/coursevideo" element={<CourseVideoPage />}></Route>
