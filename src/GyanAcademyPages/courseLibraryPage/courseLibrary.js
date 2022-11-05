@@ -14,10 +14,10 @@ const CourseLibrary = () => {
       <div>
         <HeaderBanner bgImg={background} BannerText="Course Library" />
       </div>
-      <div className="relative left-36 w-[1500px]">
-        <div>
+      <div className="flex flex-col items-center ">
+        
           <BackNavigation NavigateTo={"/"} Navigation={"Home"} />
-        </div>
+      
         <div>
           <Search />
         </div>

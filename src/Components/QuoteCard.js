@@ -1,6 +1,6 @@
 import React from 'react'
 import left_arror from "../GyanAcademyPages/HomePage/asserts/left_arror.png"
-import right_arror from "../GyanAcademyPages/HomePage/asserts/right_arror.png"
+import right_arror from "../GyanAcademyPages/HomePage/asserts/rightarrow.svg"
 import quote from "../GyanAcademyPages/HomePage/asserts/fa-quote-left.png"
 import user from "../GyanAcademyPages/HomePage/asserts/Mask.png"
 
@@ -19,7 +19,7 @@ function Quotecard() {
                         <p className='w-[693px] h-[96px] text-[#1E0E62] text-[22px] font-medium'>The most important part of the Startup Framework is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks from UI Kit. </p>
                         <div className=' flex gap-[17px]'>
                             <img className='pt-[22px]' src={user} />
-                            <p className=' pt-[44px] h-[26px] w-[236px] text-[14px] text-[#151439] opacity-[0.4]'>Jessey Kirk, designmodo</p>
+                            <p className=' pt-[44px] h-[26px] w-[236px] text-[14px] text-[#151439] opacity-[0.7]'>Jessey Kirk, designmodo</p>
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ const CourseCard = (props) => {
 
   return (
     <div>
-      <div className="h-[1515px] w-[800px] flex flex-col items-center justify-center overflow-y-scroll no-scrollbar">
+      <div className=" max-h-[1515px] w-[800px] flex flex-col justify-center overflow-y-scroll no-scrollbar">
         {courseList.length &&
           courseList.map((obj) => (
             <div className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl	 bg-[#FFFFFF] rounded-[25px] my-[50px]">

@@ -121,11 +121,11 @@ const HomePage = () => {
 
             <QuoteCard/>
 
-            <div className="mb-[44px] h-[501px]">
+            <div className=" flex justify-center items-center flex-col mb-[44px] h-[501px]">
                 <div className="pt-[45px]">
                     <p className=" text-center h-[52px] text-[42px] font-semibold">Our Values</p>
                 </div>
-                <div className=" ml-[20%] mt-[55px] rounded-rad w-[1040px] h-[305px] bg-pink-50">
+                <div className=" rounded-tl-[100px] rounded-br-[100px] mt-[55px] rounded-rad w-[1040px] h-[305px] bg-pink-50">
                     <div className=" pt-[59px] pl-[57px] flex gap-[50px] ">
                         <div>
                             <p className=" text-center text-[#9D1C7F] text-[22px] font-medium ">Seek to learn</p>

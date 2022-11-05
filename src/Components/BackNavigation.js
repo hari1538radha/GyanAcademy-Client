@@ -11,9 +11,9 @@ const BackNavigation = (props) => {
   };
   return (
     <div>
-      <div className="flex flex-row w-screen items-center mt-[44px] mb-[42px]">
+      <div className="flex flex-row w-[1170px]  items-center mt-[44px] mb-[42px]">
         <div className="cursor-pointer flex justify-center items-center" onClick={handelLibraryPage}>
-          <img src={path} className="w-3 mr-2"/>
+          <img src={path} className=" mr-2 pl-2"/>
           <h3 className="text-[20px] mb-[2px] font-medium ml-[10px]">
             Back to {props.Navigation}
           </h3>

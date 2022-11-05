@@ -17,7 +17,7 @@ function CoursePage() {
       <div>
         <HeaderBanner bgImg={bgImg} BannerText="JavaScript" />
       </div>
-      <div className="relative left-36 w-[1500px]">
+      <div className="flex flex-col justify-center items-center w-screen">
         <div>
           <BackNavigation
             NavigateTo={"/courselibrary"}
