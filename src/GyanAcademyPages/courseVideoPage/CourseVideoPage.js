@@ -14,11 +14,11 @@ import icon from "./asserts/Icon.svg";
 import vedioPlayer from "./asserts/vedioPlayer.svg";
 
 const CourseVideoPage = () => {
-  const learningTags =
-    courses.courses[0].courseAvailable[0].courseVideos[0].learningTags;
+
   let passedData = useLocation();
 
   passedData = passedData.state;
+  const learningTags =  passedData.tasks[0].learningTags
   const tasks = passedData.tasks[0].tasks;
   console.log(tasks);
   const onClickHandler = (event) => {
