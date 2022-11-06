@@ -21,7 +21,7 @@ function Quotecard() {
       } else {
         setIndexTo(indexTo + 1);
       }
-    }, 6050);
+    }, 6000);
   }, [indexTo]);
   const Quotes = [
     {
@@ -90,7 +90,7 @@ function Quotecard() {
 
         {Quotes.length > 0 &&
           qoutes.map((obj) => (
-            <div className="flex animate-fade-in-down flex-col gap-[62px]">
+            <div className="flex /*animate-fade-in-down*/ flex-col gap-[62px]">
               <div>
                 <img src={quote} />
               </div>
