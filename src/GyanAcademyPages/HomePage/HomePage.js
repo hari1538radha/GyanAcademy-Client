@@ -10,10 +10,15 @@ import webinars from "./asserts/mdi_human-male-board.png";
 import women_in_tech from "./asserts/women.png";
 
 const HomePage = () => {
+
   const Navigate = useNavigate();
   const handelPages = () => {
     Navigate("/courselibrary");
   };
+  const HandelFormPage = () => {
+    Navigate("/applicationform");
+  };
+
   return (
     <div>
       <div className="w-screen h-[670px] pl-[146px] bg-background bg-cover flex justify-between">
@@ -142,10 +147,16 @@ const HomePage = () => {
               </p>
             </div>
             <div className="pt-[38px] inline-flex flex-row gap-[14px]">
-              <button className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] ">
+              <button
+                onClick={HandelFormPage}
+                className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] "
+              >
                 Start now
               </button>
-              <button className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] ">
+              <button
+                onClick={HandelFormPage}
+                className=" shadow-home_button rounded-[6px] font-bold text-white  bg-gradient-to-b from-[#282B85E5] to-[#9A1D80E5] w-[139px] h-[49px] text-[17px] "
+              >
                 Start Free Trial
               </button>
             </div>
@@ -157,11 +168,11 @@ const HomePage = () => {
 
       <div className=" flex justify-center items-center flex-col mb-[44px] h-[501px]">
         <div className="pt-[45px]">
-          <p className=" text-center h-[52px] text-[42px] font-semibold">
+          <p className=" h-[52px] text-[42px] font-semibold">
             Our Values
           </p>
         </div>
-        <div className=" rounded-tl-[100px] rounded-br-[100px] mt-[55px] rounded-rad w-[1040px] h-[305px] bg-pink-50">
+        <div className=" mt-[55px] rounded-rad w-[1040px] h-[305px] bg-pink-50">
           <div className=" pt-[59px] pl-[57px] flex gap-[50px] ">
             <div>
               <p className=" text-center text-[#9D1C7F] text-[22px] font-medium ">
@@ -169,7 +180,7 @@ const HomePage = () => {
               </p>
               <p className=" pt-[25px] text-center w-[266px] h-[130px]">
                 Startup Framework contains components and complex blocks which
-                can easily be integrated into almost any design.{" "}
+                can easily be integrated into almost any design.
               </p>
             </div>
             <div>
