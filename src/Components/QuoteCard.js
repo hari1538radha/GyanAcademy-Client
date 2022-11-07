@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import left_arror from "../GyanAcademyPages/HomePage/asserts/left_arror.png";
-import right_arror from "../GyanAcademyPages/HomePage/asserts/right_arror.png";
+import right_arror from "../GyanAcademyPages/HomePage/asserts/rightarrow.png";
 import quote from "../GyanAcademyPages/HomePage/asserts/fa-quote-left.png";
 import user from "../GyanAcademyPages/HomePage/asserts/Mask.png";
 import senthamizlharasu from "../GyanAcademyPages/HomePage/asserts/Senthamizharasu.png";
@@ -87,7 +87,6 @@ function Quotecard() {
             src={left_arror}
           />
         </div>
-
         {Quotes.length > 0 &&
           qoutes.map((obj) => (
             <div className="flex /*animate-fade-in-down*/ flex-col gap-[62px]">
@@ -105,7 +104,6 @@ function Quotecard() {
                   {obj.Author} <p>- {obj.field}</p>
                 </p>
               </div>
-
             </div>
           ))}
 
