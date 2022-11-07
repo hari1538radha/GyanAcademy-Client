@@ -79,29 +79,30 @@ function Quotecard() {
   const qoutes = Quotes.slice(indexTo, indexTo + 1);
   return (
     <div className="mt-[50px] w-screen ">
-      <div className="pt-[86px] flex items-center gap-[140px] justify-center">
+      <div className="pt-[86px] flex gap-[140px] justify-center md:pt-[75px] md:gap-[100px] ">
         <div>
           <img
             onClick={handelLeftContent}
-            className=" cursor-pointer pt-[40px]"
+            className=" cursor-pointer pt-[40px] md:w-[9px] md:pt-[25px] "
             src={left_arror}
           />
         </div>
 
         {Quotes.length > 0 &&
           qoutes.map((obj) => (
-            <div className="flex animate-fade-in-down flex-col gap-[62px]">
-              <div>
-                <img src={quote} />
+            <div className="flex flex-col gap-[62px] md:gap-[18px]">
+              <div className="flex gap-[62px] md:gap-[30px]">
+                <img className="h-[26px] w-[38px]  md:h-[26px] md:w-[21px]" src={quote} />
+
+                <div className="">
+                  <p className="w-[693px] text-[#1E0E62] text-[22px] font-medium md:h-[71px] md:w-[369px] md:text-[13px]">
+                  The most important part of the Startup Framework is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks from UI Kit. 
+                  </p>
+                </div>
               </div>
-              <div className="">
-                <p className="w-[693px] text-[#1E0E62] text-[22px] font-medium">
-                  {obj.discription}
-                </p>
-              </div>
-              <div className=" flex justify-start items-center gap-[17px]">
-                <img className="h-20 w-20 rounded-full" src={obj.image} />
-                <p className="  h-[26px] w-[236px] text-[14px] text-[#151439] opacity-[0.7]">
+              <div className=" flex justify-start items-center gap-[17px] md:gap-[9px]">
+                <img className="h-20 w-20 rounded-full md:h-[40px] md:w-[40px]" src={obj.image} />
+                <p className=" text-[14px] text-[#151439] opacity-[0.7] md:text-[11px]">
                   {obj.Author} <p>- {obj.field}</p>
                 </p>
               </div>
@@ -112,7 +113,7 @@ function Quotecard() {
         <div>
           <img
             onClick={handelRightContent}
-            className="pt-[42px] cursor-pointer"
+            className="pt-[40px] cursor-pointer md:w-[9px] md:pt-[25px]"
             src={right_arror}
           />
         </div>
