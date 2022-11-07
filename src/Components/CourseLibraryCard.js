@@ -12,7 +12,7 @@ const CourseLibraryCard = () => {
   return (
     <div>
       <div className="w-screen pb-32 bg-gradient-to-b from-[#E1F3FF] to-[#E4D7FF] flex-wrap gap-14 flex items-center justify-center 
-      md:gap-[19px] md:pt-[25px] sm:w-[360px]">
+      md:gap-[19px] md:pt-[25px] sm:w-[540px]">
         {courses.length > 0 &&
           courses.map((obj) => (
             <div className="pt-[55px] md:pt-[15px]">
