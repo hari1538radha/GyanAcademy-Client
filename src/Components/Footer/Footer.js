@@ -9,7 +9,7 @@ function Footer() {
             Gyan Academy
           </p>
           <div className=" flex justify-between items-center pt-[47px] text-white text-[16px] md:pt-[25px] md:text-[9px] sm:text-[10px] sm:pt-[15px] sm:gap-[34px]">
-            <div className=" flex gap-[28px] md:gap-[15px] sm:gap-x-[20px] sm:flex-wrap sm:gap-y-[9px] sm:w-[100px]  ">
+            <div className=" flex gap-[28px] md:gap-[15px] sm:gap-x-[20px] sm:flex-wrap sm:gap-y-[9px] sm:w-[50%]  ">
               <a className="w-[102px] h-[27px] md:h[10px] md:w-[54px] sm:h-[15px] sm:w-[66px] " href="">
                 Bootcamps
               </a>
@@ -28,7 +28,7 @@ function Footer() {
               <p className="">© 2022</p>
               <p className="font-bold">Gyan Academy.</p>
               </div>
-              <p> All rights reserved.</p>
+              <p className=" sm:text-right" > All rights reserved.</p>
             </div>
           </div>
         </div>
