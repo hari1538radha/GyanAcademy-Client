@@ -9,7 +9,7 @@ const HeaderBanner = (props) => {
          sm:h-[112px] sm:w-[100%] sm:bg-cover sm:bg-center"
         style={{ backgroundImage: `url(${props.bgImg})` }}
       >
-        <h3 className="text-6xl text-white text-[40px] font-bold">
+        <h3 className="text-6xl text-white text-[40px] font-bold sm:text-[17px]">
           {props.BannerText}
         </h3>
       </div>
