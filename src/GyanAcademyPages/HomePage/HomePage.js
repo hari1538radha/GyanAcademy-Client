@@ -21,7 +21,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className="w-screen h-[670px] pl-[146px] bg-background bg-cover flex justify-between">
+      <div className="w-screen h-[670px] pl-[146px] bg-background  flex justify-between">
         <div className="w-[465px] pt-[101px] inline-flex flex-col gap-[45px]">
           <p className="font-bold text-[52px]">Advance Your Skills</p>
           <p className="h-[96px] text-[22px] leading-[32px]">
