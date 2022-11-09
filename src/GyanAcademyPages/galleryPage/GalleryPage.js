@@ -47,9 +47,9 @@ function GalleryPage() {
             data.map((obj) => {
                 return (
                    
-                        <div className='w-full h-full overflow-hidden mb-5'>
+                        <div className='w-full h-full overflow-hidden mb-5 rounded-xl'>
 
-                        <img src={obj.imgsrc} alt='' className='w-full h-full  rounded-xl ease-out duration-[2000ms] hover:scale-110 ' />
+                        <img src={obj.imgsrc} alt='' className='w-full h-full   ease-out duration-[2000ms] hover:scale-110 ' />
 
                     </div>
                 )

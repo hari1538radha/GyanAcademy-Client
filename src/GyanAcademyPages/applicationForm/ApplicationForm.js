@@ -45,7 +45,7 @@ const ApplicationForm = () => {
 
     console.log(a);
 
-    const objectURL = `https:${process.env.REACT_APP_S3_BUCKET}.s3.eu-west-2.amazonaws.com/${fileName}`;
+    const objectURL = `https://${process.env.REACT_APP_S3_BUCKET}.s3.eu-west-2.amazonaws.com/${fileName}`;
 
     setLink(objectURL);
   };
