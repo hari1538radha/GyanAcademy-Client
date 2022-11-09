@@ -1,15 +1,18 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import AWS from "aws-sdk";
+import axios, * as others from "axios";
+axios.defaults.headers.post["Content-Type"] = "text/plain";
 
 const ApplicationForm = () => {
+  const [resumeUploadLink, setLink] = useState("");
+  const formUrl =
+    "https://sheet.best/api/sheets/25e74a3e-af6b-4252-b017-603d4d353fa9";
   const accessKeyId = process.env.REACT_APP_AWS_ACCESS_KEY_ID;
   const secretAccessKeys = process.env.REACT_APP_AWS_SECRET_ACCESS_KEY;
-  const[progress,setProgress] =useState(0)
-
+  const [progress, setProgress] = useState(0);
   const handelFilePath = (e) => {
     const file = e.target.files[0];
     const fileName = e.target.files[0].name;
-
     AWS.config.update({
       accessKeyId: accessKeyId,
       secretAccessKey: secretAccessKeys,
@@ -26,30 +29,26 @@ const ApplicationForm = () => {
       Bucket: process.env.REACT_APP_S3_BUCKET,
       Key: fileName,
     };
-  
-       const a =  myBucket
+
+    const a = myBucket
       .putObject(params)
       .on("httpUploadProgress", (evt) => {
-        setProgress(Math.round((evt.loaded / evt.total) * 100))
-        console.log(progress)
+        setProgress(Math.round((evt.loaded / evt.total) * 100));
+        console.log(progress);
       })
       .send((err) => {
         if (err) console.log(err);
       });
 
     console.log(a);
-    
-
-     
 
     const objectURL = `https:${process.env.REACT_APP_S3_BUCKET}.s3.eu-west-2.amazonaws.com/${fileName}`;
 
-    console.log(objectURL);
+    setLink(objectURL);
   };
 
   const handelFormData = (e) => {
     e.preventDefault();
-
     const ele = e.target.elements;
     const firstName = ele[0].value;
     const lastName = ele[1].value;
@@ -57,15 +56,20 @@ const ApplicationForm = () => {
     const mobileNumber = ele[3].value;
     const qualification = ele[4].value;
     const category = ele[5].value;
-
-    console.log(
-      firstName,
-      lastName,
-      email,
-      mobileNumber,
-      qualification,
-      category
-    );
+    const resumeFile = ele[6].files;
+    const formData = {
+      Firstname: firstName,
+      Lastname: lastName,
+      Email: email,
+      Mobilenumber: mobileNumber,
+      Qualification: qualification,
+      Category: category,
+      Resumelink: resumeUploadLink,
+    };
+    console.log(formData);
+    axios.post(formUrl, formData).then((response) => {
+      console.log(response);
+    });
   };
   const fields = [
     ["First Name *", "First Name *"],
@@ -156,6 +160,6 @@ const ApplicationForm = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ApplicationForm;
