@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import AWS from "aws-sdk";
 import axios, * as others from "axios";
+
 axios.defaults.headers.post["Content-Type"] = "text/plain";
 
 const ApplicationForm = () => {
   const [resumeUploadLink, setLink] = useState("");
+
   const formUrl =
     "https://sheet.best/api/sheets/25e74a3e-af6b-4252-b017-603d4d353fa9";
+
   const accessKeyId = process.env.REACT_APP_AWS_ACCESS_KEY_ID;
   const secretAccessKeys = process.env.REACT_APP_AWS_SECRET_ACCESS_KEY;
   const [progress, setProgress] = useState(0);
@@ -66,6 +69,7 @@ const ApplicationForm = () => {
       Category: category,
       Resumelink: resumeUploadLink,
     };
+    console.log(resumeUploadLink)
     console.log(formData);
     axios.post(formUrl, formData).then((response) => {
       console.log(response);
