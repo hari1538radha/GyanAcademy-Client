@@ -8,8 +8,10 @@ const BackNavigation = (props) => {
     Navigate(-1);
   };
   return (
+
     <div >
       <div className="flex flex-row w-[1170px] items-center mt-[44px] mb-[42px] md:w-[768px] md:mt-[5%] sm:w-[310px] xl:w-[1020px]">
+
         <div
           className="cursor-pointer flex justify-center items-center md:h-[10px] sm:w-[310px] sm:ml-[-30px] sm:mt-[-30px] xl:w-[1020px]"
           onClick={handelLibraryPage}
