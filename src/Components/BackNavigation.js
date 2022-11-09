@@ -8,14 +8,16 @@ const BackNavigation = (props) => {
     Navigate(-1);
   };
   return (
-    <div>
-      <div className="flex flex-row w-[1170px] mt-[44px] mb-[42px] md:w-[763px] xl:w-[955px]">
+
+    <div >
+      <div className="flex flex-row w-[1170px] items-center mt-[44px] mb-[42px] md:w-[768px] md:mt-[5%] sm:w-[310px] xl:w-[1020px]">
+
         <div
-          className="cursor-pointer flex justify-center items-center"
+          className="cursor-pointer flex justify-center items-center md:h-[10px] sm:w-[310px] sm:ml-[-30px] sm:mt-[-30px] xl:w-[1020px]"
           onClick={handelLibraryPage}
         >
-          <img src={path} className=" mr-2 pl-2" />
-          <h3 className="text-[20px] mb-[2px] font-medium ml-[10px]">
+          <img src={path} className=" mr-2 pl-2 md:w-[15px] sm:w-[4%] xl:w-[18px] " />
+          <h3 className="text-[20px] mb-[2px] font-medium ml-[10px] md:text-[15px] sm:w-[220px] sm:text-[10px] xl:w-[1020px] xl:text-[18px]">
             Back to {props.Navigation}
           </h3>
         </div>
