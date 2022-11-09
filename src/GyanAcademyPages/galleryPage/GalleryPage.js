@@ -38,18 +38,24 @@ function GalleryPage() {
     ]
 
   return (
-    <div className='ml-[160px] mr-[160px] mb-[15px]'>
-        <div>
-            <h1 className='flex justify-center text-[50px] font-medium mt-[38px] mb-[28px]'>Gallery</h1>
+    <div className='ml-[160px] mr-[160px] mb-[15px]
+    md:ml-[30px] md:mr-[30px]
+    sm:ml-[30px] sm:mr-[30px]'>
+        <div className=''>
+            <h1 className='flex justify-center text-[50px] font-medium mt-[38px] mb-[28px] 
+            md:text-[40px] md:mt-[20px] md:mb-[20px]
+            sm:text-[30px] sm:mt-[15px] sm:mb-[15px]'>
+            Gallery
+            </h1>
         </div>
         <div className='columns-2 row-2 gap-[15px] sm:columns-1'>
         {
             data.map((obj) => {
                 return (
-                   
-                        <div className='w-full h-full overflow-hidden mb-5'>
 
-                        <img src={obj.imgsrc} alt='' className='w-full h-full  rounded-xl ease-out duration-[2000ms] hover:scale-110 ' />
+                        <div className='w-full h-full overflow-hidden mb-[10px] rounded-[10px] sm:rounded-[5px]'>
+
+                        <img src={obj.imgsrc} alt='' className='w-full h-full rounded-[10px] ease-out duration-[2000ms] hover:scale-110 sm:rounded-[5px]' />
 
                     </div>
                 )
