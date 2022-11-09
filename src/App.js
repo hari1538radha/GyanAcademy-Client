@@ -12,15 +12,15 @@ import Navbar from "./Components/Navbar/NavBar";
 function App() {
   return (
     <div className="font-poppins">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} exact></Route>
         <Route path="/coursevideo" element={<CourseVideoPage />}></Route>
         <Route path="/Courses" element={<CoursePage />}></Route>
-        <Route path="/applicationform" element={<ApplicationForm/>}></Route>
+        <Route path="/applicationform" element={<ApplicationForm />}></Route>
         <Route path="/courselibrary" element={<CourseLibrary />} exact></Route>
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
