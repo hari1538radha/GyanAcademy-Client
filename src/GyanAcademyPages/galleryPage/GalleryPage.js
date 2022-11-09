@@ -42,12 +42,15 @@ function GalleryPage() {
         <div>
             <h1 className='flex justify-center text-[50px] font-medium mt-[38px] mb-[28px]'>Gallery</h1>
         </div>
-        <div className='columns-2 gap-x-[15px] sm:columns-1'>
+        <div className='columns-2 row-2 gap-[15px] sm:columns-1'>
         {
             data.map((obj) => {
                 return (
-                    <div>
-                        <img src={obj.imgsrc} alt='' className='w-[100%] pt-[10px] rounded-[10px] scale-100 ease-in-out duration-1000 hover:scale-110' />
+                   
+                        <div className='w-full h-full overflow-hidden mb-5'>
+
+                        <img src={obj.imgsrc} alt='' className='w-full h-full  rounded-xl ease-out duration-[2000ms] hover:scale-110 ' />
+
                     </div>
                 )
             })
