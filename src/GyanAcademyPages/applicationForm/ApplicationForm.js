@@ -1,6 +1,27 @@
 import React from "react";
+// import * as dotenv from 'dotenv';
+// dotenv.config();
+
 
 function ApplicationForm() {
+
+  const handelFormData = (e) =>
+  {
+    e.preventDefault();
+    const ele = e.target.elements
+    const firstName =ele[0].value
+     const lastName = ele[1].value
+     const email = ele[2].value
+
+     const mobileNumber = ele[3].value
+     const qualification = ele[4].value
+
+     const category = ele[5].value
+      const resumeFile = ele[6].files
+     console.log(firstName,lastName,email,mobileNumber,qualification,category,resumeFile)
+
+
+  }
   const fields = [
     ["First Name *", "First Name *"],
     ["Last Name *", "Last Name *"],
@@ -8,17 +29,25 @@ function ApplicationForm() {
     ["Mobile Number *", "Mobile Number *"],
     ["Qualification *", "eg . Engineering, BCA, BSC, MBA.. Etc*"],
   ];
+// console.log(`Database name is ${process.env.}`);
+
   return (
     <div className=" flex font-poppins flex-col  justify-center items-center pt-28 pb-28 bg-gradient-to-b from-[#E1F3FF] to-[#E4D7FF] ">
       <div className=" flex flex-col  justify-center items-center w-full ">
+        <form onSubmit={handelFormData}>
         <h1 className="text-[42px] font-medium mb-[10px]">Apply Here </h1>
         <p className="text-[16px] font-normal mb-[60px]">
           Don’t miss out on your next big career opportunity. Fill the form and
           our HR will reach out to you shortly!
         </p>
+         
         <div className="flex flex-row flex-wrap w-[756px] gap-x-10 mb-[40px] ">
           {fields.map((obj) => (
+
+
             <div className="w-[358px] text-[16px] font-normal">
+            
+              
               <label className=" font-semibold text-[#484B4D] mb-[10px]">
                 {obj[0]}
               </label>
@@ -78,8 +107,11 @@ function ApplicationForm() {
         <button className="bg-gradient-to-b from-[#282b85e6] to-[#9a1d80e6] text-white  w-[760px] h-[46px]">
           Apply
         </button>
-      </div>
+        </form>
     </div>
+        
+        </div>
+      
   );
 }
 

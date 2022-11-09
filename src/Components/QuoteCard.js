@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import left_arror from "../GyanAcademyPages/HomePage/asserts/left_arror.png";
-import right_arror from "../GyanAcademyPages/HomePage/asserts/right_arror.png";
+import right_arror from "../GyanAcademyPages/HomePage/asserts/rightarrow.png";
 import quote from "../GyanAcademyPages/HomePage/asserts/fa-quote-left.png";
 import user from "../GyanAcademyPages/HomePage/asserts/Mask.png";
 import senthamizlharasu from "../GyanAcademyPages/HomePage/asserts/Senthamizharasu.png";
@@ -21,7 +21,7 @@ function Quotecard() {
       } else {
         setIndexTo(indexTo + 1);
       }
-    }, 6050);
+    }, 6000);
   }, [indexTo]);
   const Quotes = [
     {
@@ -87,18 +87,19 @@ function Quotecard() {
             src={left_arror}
           />
         </div>
-
         {Quotes.length > 0 &&
           qoutes.map((obj) => (
+
             <div className="flex flex-col gap-[62px] md:gap-[18px] sm:gap-[26px] sm:flex-col-reverse w-screen  ">
               <div className="flex gap-[62px] md:gap-[30px] sm:gap-4 sm:justify-center">
                 <img className="h-[26px] w-[38px]  md:h-[26px] md:w-[21px]" src={quote} />
 
                 <div className="">
                   <p className="w-[693px] text-[#1E0E62] text-[22px] font-medium md:h-[71px] md:w-[369px] md:text-[13px] sm:h-[88px] sm:w-[282px] sm:text-[12px] ">
-                  The most important part of the Startup Framework is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks from UI Kit. 
+                  {obj.discription}
                   </p>
                 </div>
+
               </div>
               <div className=" flex justify-start items-center gap-[17px] md:gap-[9px]">
                 <img className="h-20 w-20 rounded-full md:h-[40px] md:w-[40px] sm:h-[60px] sm:w-[60px] " src={obj.image} />
@@ -106,7 +107,6 @@ function Quotecard() {
                   {obj.Author} <p>- {obj.field}</p>
                 </p>
               </div>
-
             </div>
           ))}
 

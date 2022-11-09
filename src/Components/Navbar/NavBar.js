@@ -10,10 +10,12 @@ function Header() {
   };
   return (
     <div>
+
       <div className=" flex justify-between items-center w-screen h-[72px] shadow-header_box flex pl-[147px] md:pl-[36px] sm:h-[66px] sm:flex-col sm:items-start sm:pl-[0px] ">
         <div className="flex items-center justify-center sm:pl-[22px] sm:h-[36px] sm:w-screen sm:items-start sm:justify-start sm:pt-[9px]">
           <img src={Logo} className="pr-3 sm:pr-[5px] sm:h-[20px]" />
           <div 
+
             onClick={handelHomePage}
             className="flex gap-2 cursor-pointer font-bold text-[24.69px] md:text-[20px] sm:text-[12px] sm:gap-1 "
           >

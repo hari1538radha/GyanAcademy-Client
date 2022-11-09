@@ -38,12 +38,14 @@ const HomePage = () => {
 
   return (
     <div>
+
       <div className="w-screen h-[670px] pl-[146px] bg-background bg-cover flex justify-between 
       md:pl-[48px] md:h-[304px] sm:flex-col-reverse sm:pl-0 sm:bg-none sm:h-[487px] sm:gap-[31px] sm:justify-end sm:items-center ">
         <div className="w-[465px] pt-[101px] inline-flex flex-col gap-[45px] md:pt-[35px] sm:gap-[21px] sm:h-[217px] sm:w-[297px] sm:pt-0 sm:justify-center sm:items-center">
           <p className="font-bold text-[52px] md:h-[48px] md:w-[171px] md:text-[22px] sm:h-[57px] sm:w-[160px] sm:text-center sm:text-[22px] ">Advance Your Skills</p>
           <p className="h-[96px] text-[22px] md:h-[69px] md:w-[325px] md:text-[13px] sm:pl-[32px] sm:text-[12px] sm:h-[67px]">
             Develop critical tech skills. Cut cycle times. Build happier, healthier tech teams. And transform your goals into gains.{" "}
+
           </p>
           <button
             onClick={handelPages}
