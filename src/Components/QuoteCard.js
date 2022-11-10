@@ -95,13 +95,13 @@ function Quotecard() {
                 <img className="h-[26px] w-[38px]  md:h-[26px] md:w-[21px]" src={quote} />
 
                 <div className="">
-                  <p className="w-[693px] text-[#1E0E62] text-[22px] font-medium md:h-[71px] md:w-[369px] md:text-[13px] sm:h-[88px] sm:w-[282px] sm:text-[12px] ">
+                  <p className="w-[693px] text-[#1E0E62] text-[22px] font-medium md:h-[172px] md:w-[369px] md:text-[13px] sm:h-[210px] sm:w-[282px] sm:text-[12px] ">
                   {obj.discription}
                   </p>
                 </div>
 
               </div>
-              <div className=" flex justify-start items-center gap-[17px] md:gap-[9px]">
+              <div className=" flex justify-start items-center gap-[17px] pl-[100px] md:gap-[9px] md:pl-[52px] sm:pl-0 ">
                 <img className="h-20 w-20 rounded-full md:h-[40px] md:w-[40px] sm:h-[60px] sm:w-[60px] " src={obj.image} />
                 <p className=" text-[14px] text-[#151439] opacity-[0.7] md:text-[11px]">
                   {obj.Author} <p>- {obj.field}</p>
