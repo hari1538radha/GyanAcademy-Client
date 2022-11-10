@@ -5,11 +5,13 @@ import CourseVideoPage from "./GyanAcademyPages/courseVideoPage/CourseVideoPage"
 import CourseLibrary from "./GyanAcademyPages/courseLibraryPage/courseLibrary";
 import HomePage from "./GyanAcademyPages/HomePage/HomePage";
 import ApplicationForm from "./GyanAcademyPages/applicationForm/ApplicationForm";
+import GalleryPage from "./GyanAcademyPages/galleryPage/GalleryPage";
 //components
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/NavBar";
 
 function App() {
+
   return (
     <div className="font-poppins">
       <Navbar />
@@ -19,6 +21,7 @@ function App() {
         <Route path="/Courses" element={<CoursePage />}></Route>
         <Route path="/applicationform" element={<ApplicationForm />}></Route>
         <Route path="/courselibrary" element={<CourseLibrary />} exact></Route>
+        <Route path="/gallery" element={<GalleryPage />} exact></Route>
       </Routes>
       <Footer />
     </div>

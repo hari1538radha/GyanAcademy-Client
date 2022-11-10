@@ -90,7 +90,7 @@ function Quotecard() {
         {Quotes.length > 0 &&
           qoutes.map((obj) => (
 
-            <div className="flex flex-col gap-[62px] md:gap-[18px] sm:gap-[26px] sm:flex-col-reverse w-screen  ">
+            <div className="flex flex-col gap-[62px] md:gap-[18px] sm:gap-[26px] sm:flex-col-reverse sm:w-screen  ">
               <div className="flex gap-[62px] md:gap-[30px] sm:gap-4 sm:justify-center">
                 <img className="h-[26px] w-[38px]  md:h-[26px] md:w-[21px]" src={quote} />
 
