@@ -32,10 +32,10 @@ function Header() {
               <a className="sm:h-[12px] sm:w-[43px]" href="">About</a> */}
             </ul>
           </div>
-          <div className="mt-[14px] mr-[130px] sm:mr-[16px]">
-            <button className="text-[16px] font-bold bg-gradient-to-b from-[#282B85] to-[#9A1D80] text-white h-[44px] w-[140px] rounded-[6px]
-            sm:text-[9px] sm:w-[71px] sm:h-[21px] sm:rounded-[3px]"
-            >Contact Us</button>
+          <div className="mt-[22px] mr-[130px] sm:mr-[16px] sm:mt-[14px]">
+            <a href="https://gyanmatrix.com/contact-us/" className="text-[16px] font-bold bg-gradient-to-b from-[#282B85] to-[#9A1D80] text-white px-[22px] py-[10px] rounded-[6px]
+            sm:text-[9px] sm:px-[10px] sm:py-[5px] sm:rounded-[3px]">
+            Contact Us</a>
           </div>
         </div>
       </div>

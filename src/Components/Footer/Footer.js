@@ -22,6 +22,9 @@ function Footer() {
               <a className="w-[101px] h-[27px] md:h[10px] md:w-[64px] sm:h-[15px] sm:w-[73px] " href="">
                 Learning Path
               </a>
+              <a className="w-[101px] h-[27px] md:h[10px] md:w-[64px] sm:h-[15px] sm:w-[73px] " href="/gallery">
+                Gallery
+              </a>
             </div>
             <div className=" flex gap-1 sm:gap-[0.5px] sm:flex-col">
               <div className="flex gap-1 sm:gap-[0.5] " >
