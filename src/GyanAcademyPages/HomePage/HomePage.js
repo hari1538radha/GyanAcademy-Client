@@ -109,7 +109,9 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div className=" pt-[58px] pr-[256px] flex justify-between md:pr-[70px] sm:flex-col sm:pt-[28px] sm:gap-[21px] sm:pr-0 sm:flex sm:flex-col sm:items-center ">
+
+          <div className=" pt-[58px] pr-[256px] flex justify-between md:pr-[70px] sm:flex-col sm:pt-[28px] sm:gap-[21px] sm:pr-0 sm:items-center ">
+
             <img
               className=" mt-[26px] float-left h-[510px] w-[611px] md:w-[322px] md:h-[332px] md:mt-[-10px] sm:mt-0 sm:h-[257px] sm:w-[329px] sm:float-none  "
               src={sample3}
