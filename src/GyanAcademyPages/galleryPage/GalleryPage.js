@@ -38,7 +38,7 @@ function GalleryPage() {
     ]
 
   return (
-    <div className='ml-[160px] mr-[160px] mb-[15px]
+    <div className='ml-[8%] mr-[8%] mb-[15px]
     md:ml-[30px] md:mr-[30px]
     sm:ml-[30px] sm:mr-[30px]'>
         <div className=''>
