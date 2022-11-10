@@ -23,7 +23,7 @@ function CoursePage() {
         <div>
           <Search />
         </div>
-        <div>
+        <div className="sm:w-[100%] sm:mt-[10px]">
           <CourseHeader />
           <CourseCardContainer courseList={passedData.state} />
         </div>
