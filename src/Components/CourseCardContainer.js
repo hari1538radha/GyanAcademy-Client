@@ -6,7 +6,7 @@ import CourseCard from "./CourseCard";
 const CardContainer = (props) => {
   return (
     <div>
-      <div className="flex flex-row mt-[0px]">
+      <div className="flex flex-row mt-[0px] md:flex-col sm:flex-col">
         <div>
           <CourseCard courseList={props.courseList} />
         </div>
