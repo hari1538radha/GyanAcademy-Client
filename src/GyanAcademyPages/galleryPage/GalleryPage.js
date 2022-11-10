@@ -57,6 +57,7 @@ function GalleryPage() {
 
                         <img src={obj.imgsrc} alt='' className='w-full h-full rounded-[10px] ease-out duration-[2000ms] hover:scale-110 sm:rounded-[5px]' />
 
+
                     </div>
                 )
             })
