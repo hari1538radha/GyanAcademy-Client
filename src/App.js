@@ -24,6 +24,7 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} exact></Route>
       </Routes>
       <Footer />
+
     </div>
   );
 }
