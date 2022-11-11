@@ -95,7 +95,7 @@ const CourseVideoPage = () => {
                 >
                   {obj.taskItems.length &&
                     obj.taskItems.map((obj) => (
-                      <div className="flex items-center justify-start w-[1168px] border-2 border-gray-200 h-24 first:rounded-t-none last:rounded-b-lg md:ml-[10px] md:w-[735px] md:h-[60px] sm:w-[310px] sm:h-[40px] xl:w-[1020px sl:w-[470px] sl:h-[60px]">
+                      <div className="flex items-center justify-start w-[1168px] border-2 border-gray-200 h-24 first:rounded-t-none last:rounded-b-lg md:ml-[10px] md:w-[735px] md:h-[60px] sm:w-[310px] sm:h-[40px] xl:w-[1020px sl:w-[470px] sl:h-[60px] xl:w-[1025px]">
                         <img
                           className="ml-[35px] mr-[31px] md:w-[15px] sm:w-[310px] sm:w-[4%] xl:w-[2%] sl:w-[4%]"
                           src={vedioPlayer}

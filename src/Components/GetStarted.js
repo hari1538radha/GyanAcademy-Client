@@ -8,7 +8,7 @@ const GetStarted = () => {
   };
   return (
     <div>
-      <div className="w-[380px] h-[230px] bg-[#FFFFFF] rounded-[25px] p-[30px] ml-[31px] justify-between flex flex-col sm:w-[320px] sm:ml-[0px]">
+      <div className="w-[380px] h-[230px] bg-[#FFFFFF] rounded-[25px] p-[30px] ml-[31px] justify-between flex flex-col sm:w-[320px] sm:ml-[0px] sl:w-[380px] sl:ml[0px] xl:ml-[13%]">
         <h2 className="text-[20px] font-bold">Try It</h2>
         <p className="text-[16px] font-medium">
           Get this learning path plus top-rated picks in tech skills and other
