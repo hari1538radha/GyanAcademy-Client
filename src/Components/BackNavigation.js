@@ -5,7 +5,7 @@ import path from "../GyanAcademyPages/coursePage/asserts/Path.png";
 const BackNavigation = (props) => {
   const Navigate = useNavigate();
   const handelLibraryPage = () => {
-    Navigate(-1);
+    Navigate("/");
   };
   return (
 
