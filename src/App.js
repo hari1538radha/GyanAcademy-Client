@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="font-poppins">
-       <Navbar /> 
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} exact></Route>
         <Route path="/coursevideo" element={<CourseVideoPage />}></Route>
@@ -23,7 +23,8 @@ function App() {
         <Route path="/courselibrary" element={<CourseLibrary />} exact></Route>
         <Route path="/gallery" element={<GalleryPage />} exact></Route>
       </Routes>
-      <Footer /> 
+      <Footer />
+
     </div>
   );
 }

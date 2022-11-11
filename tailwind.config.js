@@ -3,11 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     screens: {
-      xl: { min: "1025px", max: "1250px" },
+      xl: { min: "1025px", max: "1251px" },
 
-      md: { min: "768px", max: "1024px" },
+      md: { min: "767px", max: "1025px" },
 
-      sl: { min: "480px", max: "767px" },
+      sl: { min: "479px", max: "767px" },
 
       sm: { min: "320px", max: "479px" },
     },
@@ -27,6 +27,7 @@ module.exports = {
       },
       borderRadius: {
         rad: "75px 0px 75px",
+        rad2: "75px 0px 75px",
       },
       keyframes: {
         "fade-in-down": {

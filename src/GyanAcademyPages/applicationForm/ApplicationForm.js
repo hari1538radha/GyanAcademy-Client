@@ -88,20 +88,20 @@ const ApplicationForm = () => {
   return (
     <div className=" flex font-poppins flex-col  justify-center items-center pt-28 pb-28 bg-gradient-to-b from-[#E1F3FF] to-[#E4D7FF] sm:pt-10 sm:pb-10">
       <form
-        className=" sm:flex sm:flex-col sm:items-center"
+        className=" sl:flex sl:flex-col sl:items-center sm:flex sm:flex-col sm:items-center"
         onSubmit={handelFormData}
       >
         <div className=" flex flex-col justify-center items-center w-full">
-          <h1 className="text-[42px] font-medium mb-[10px] md:flex md:justify-center sm:text-[16px]">
+          <h1 className="text-[42px] font-medium mb-[10px] md:flex md:justify-center sl:text-[30px] sm:text-[16px]">
             Apply Here{" "}
           </h1>
-          <p className="text-[16px] font-normal mb-[60px] md:text-center sm:text-[9px] sm:w-[250px] sm:text-center sm:mb-[30px] ">
+          <p className="text-[16px] font-normal mb-[60px] md:text-center sl:text-[16px] sl:w-[450px] sl:text-center sl:mb-[30px] sm:text-[9px] sm:w-[250px] sm:text-center sm:mb-[30px] ">
             Don’t miss out on your next big career opportunity. Fill the form
             and our HR will reach out to you shortly!
           </p>
         </div>
 
-        <div className="flex flex-row flex-wrap w-[756px] gap-x-10 mb-[40px] md:justify-center md:gap-x-4 sm:gap-x-0 sm:w-screen sm:justify-center ">
+        <div className="flex flex-row flex-wrap w-[756px] gap-x-10 mb-[40px] md:justify-center md:gap-x-4 sl:gap-x-0 sl:w-[700px] sl:justify-center sm:gap-x-0 sm:w-screen sm:justify-center ">
           {fields.map((obj) => (
             <div className="w-[358px] text-[16px] font-normal sm:text-[9px] sm:w-[250px]">
               <label className=" font-semibold text-[#484B4D] mb-[10px]">
@@ -131,8 +131,8 @@ const ApplicationForm = () => {
             </select>
           </div>
         </div>
-        <div className="md:flex md:flex-col md:items-center flex flex-col items-center justify-center">
-          <label className="text-[16px] font-semibold sm:text-[9px]">
+        <div className="md:flex md:flex-col md:items-center">
+          <label className="text-[16px] font-semibold md:w-[600px] sm:text-[9px]">
             Upload resume *
           </label>
           <div className="flex items-center justify-center">
@@ -145,7 +145,7 @@ const ApplicationForm = () => {
           </div>
 
           <div className="">
-            <label className="flex justify-center w-[755px] h-[115px]  transition bg-white border-2 border-gray-500 mt-4  mb-8 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+            <label className="flex justify-center w-[755px] h-[115px]  transition bg-white border-2 border-gray-500 mt-4  mb-8 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none md:w-[600px] sl:w-[400px] sm:w-[250px]">
               <span className="flex items-center  flex-col justify-center">
                 <svg
                   width="25"
@@ -181,12 +181,12 @@ const ApplicationForm = () => {
           </div>
         </div>
 
-        <p className="text-[16px] font-normal mb-[30px] md:text-center sm:text-[9px] sm:w-[250px]">
+        <p className="text-[16px] font-normal mb-[30px] md:text-center sl:w-[400px] sl:text-center sm:text-[9px] sm:w-[250px] sm:text-center">
           By clicking *Apply*, I agree to GyanAcademy Terms & Conditions and
           Privacy Policy & Notice
         </p>
         <div className="md:flex md:justify-center">
-          <button className="bg-gradient-to-b rounded-[5px] from-[#282b85e6] to-[#9a1d80e6] text-white  w-[760px] h-[46px] md:w-[400px] sm:text-[9px] sm:w-[150px] sm:h-[30px] ">
+          <button className="bg-gradient-to-b rounded-[5px] from-[#282b85e6] to-[#9a1d80e6] text-white  w-[760px] h-[46px] md:w-[400px] sl:w-[300px] sm:text-[9px] sm:w-[150px] sm:h-[30px] ">
             Apply
           </button>
         </div>
