@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import AWS from "aws-sdk";
-// import axios, * as others from "axios";
+ import AWS from "aws-sdk";
+import axios, * as others from "axios";
 import successTick from "./asserts/animated-check.gif";
 
-// axios.defaults.headers.post["Content-Type"] = "text/plain";
+axios.defaults.headers.post["Content-Type"] = "text/plain";
 
 const ApplicationForm = () => {
   const [resumeUploadLink, setLink] = useState("");
@@ -20,15 +20,15 @@ const ApplicationForm = () => {
     const fileName = e.target.files[0].name;
     setFileName(fileName);
 
-    // AWS.config.update({
-    //   accessKeyId: accessKeyId,
-    //   secretAccessKey: secretAccessKeys,
-    // });
+    AWS.config.update({
+      accessKeyId: accessKeyId,
+      secretAccessKey: secretAccessKeys,
+     });
 
-    // const myBucket = new AWS.S3({
-    //   params: { Bucket: process.env.REACT_APP_S3_BUCKET },
-    //   region: "eu-west-2",
-    // });
+    const myBucket = new AWS.S3({
+     params: { Bucket: process.env.REACT_APP_S3_BUCKET },
+     region: "eu-west-2",
+    });
 
     const params = {
       ACL: "public-read",
@@ -37,14 +37,14 @@ const ApplicationForm = () => {
       Key: fileName,
     };
 
-    // myBucket
-    //   .putObject(params)
-    //   .on("httpUploadProgress", (evt) => {
-    //     setProgress(Math.round((evt.loaded / evt.total) * 100));
-    //   })
-    //   .send((err) => {
-    //     if (err) console.log(err);
-    //   });
+     myBucket
+       .putObject(params)
+       .on("httpUploadProgress", (evt) => {
+         setProgress(Math.round((evt.loaded / evt.total) * 100));
+       })
+      .send((err) => {
+         if (err) console.log(err);
+       });
   };
   const objectURL = `https://${process.env.REACT_APP_S3_BUCKET}.s3.eu-west-2.amazonaws.com/${fileName}`;
   useEffect(() => {
@@ -73,9 +73,9 @@ const ApplicationForm = () => {
     };
     console.log(resumeUploadLink);
     console.log(formData);
-    // // axios.post(formUrl, formData).then((response) => {
-    //   console.log(response);
-    // });
+     axios.post(formUrl, formData).then((response) => {
+      console.log(response);
+    });
   };
   const fields = [
     ["First Name *", "First Name *"],
