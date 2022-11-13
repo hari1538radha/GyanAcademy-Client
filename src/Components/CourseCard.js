@@ -33,17 +33,20 @@ const CourseCard = (props) => {
   };
 
   return (
-    <div className="sm:w-[100%]">
-      <div className=" max-h-[1515px] w-[800px] flex flex-col justify-center overflow-y-scroll no-scrollbar md:w-[760px] sm:w-[100%] sm:mt-[-15%x ]">
+    <div className="sm:w-[100%] sl:w-[480px] xl:w-[1025px]">
+      <div className=" max-h-[1515px] w-[800px] flex flex-col justify-center overflow-y-scroll no-scrollbar md:w-[760px] sm:w-[100%] sl:w-[100%] xl:w-[100%] ">
         {courseList?.length > 0 &&
           courseList.map((obj) => (
-            <div className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl	 bg-[#FFFFFF] rounded-[25px] my-[50px] md:w-[760px] sm:w-[100%] sm:flex-col sm:h-[100%] sm:mt-[100px] sm:h-[50%] sm:mt[10%]">
-              <img src={preview} className="p-[24px] sm:w-[440px] sm:h-[300px] sm:ml-[3%]" />
-              <div className="flex flex-col justify-between p-[24px] sm:ml-[7%]">
-                <h2 className="border-l-[4px] border-[#9D1C7F] pl-[7px] text-[20px] font-semibold sm:h-[70px] sm:text-[20px]">
+            <div className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl bg-[#FFFFFF] rounded-[25px] my-[50px] md:w-[760px] sm:w-[100%] sm:flex-col  sm:mt-[100px] sm:h-[5%] sm:mt[10%] sl:flex-col sl:w-[480px] sl:h-[100%] sl:p-[10px] sl:pl-[10px] xl:ml-[13%]">
+              <img
+                src={preview}
+                className="p-[24px] sm:h-[270px] sm:p-[9px] sm:w-[100%] sl:w-[400px] sl:h-[300px] sl:ml-[30px]"
+              />
+              <div className="flex flex-col justify-between p-[24px]">
+                <h2 className="border-l-[4px] border-[#9D1C7F] pl-[7px] text-[20px] font-semibold sm:h-[40px] sm:mt-[15px] sm:text-[20px] sl:h-[40px] sl:text-[25px] ">
                   {obj.courseName}
                 </h2>
-                <div className="flex flex-row items-center sm:h-[30px] sm:mt-[10px]">
+                <div className="flex flex-row items-center sm:h-[30px] sm:mt-[10px] sl:h-[40px] sl:mt-[10px]">
                   <p className="text-[14px] font-normal ">
                     {obj.courseLessons} lessons
                   </p>
@@ -54,7 +57,7 @@ const CourseCard = (props) => {
                     {obj.courseLevel}
                   </li>
                 </div>
-                <div className="flex flex-row items-center ">
+                <div className="flex flex-row items-center sm:h-[40px]">
                   <img src={profile} className="mr-[7px]" />
                   <p className="mr-[15px] text-[12px] font-medium">
                     {obj.courseTutor}
@@ -62,7 +65,7 @@ const CourseCard = (props) => {
                   <img src={ratings} className="h-[11px] w-[11px] mr-[5px]" />
                   <p className="text-[12px] font-medium">{obj.courseRatings}</p>
                 </div>
-                <p className="text-[14px] font-normal sm:mt-[10px]">
+                <p className="text-[14px] font-normal sm:mt-[15px] sl:mt-[10px]">
                   {obj.courseDescription}
                 </p>
                 <button
@@ -75,7 +78,7 @@ const CourseCard = (props) => {
                       obj.courseName
                     )
                   }
-                  className="border-[2px] w-[174px] h-[42px] rounded-[25px] border-[#9D1C7F] left-[180px] relative sm:left-[30px] sm:mt-[20px]"
+                  className="border-[2px] w-[174px] h-[42px] rounded-[25px] border-[#9D1C7F] left-[180px] relative sm:left-[30px] sm:mt-[20px] sl:left-[40px] sl:mt-[20px]"
                 >
                   Enroll
                 </button>
