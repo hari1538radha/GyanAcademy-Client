@@ -76,7 +76,7 @@ function Quotecard() {
           <img
             alt=""
             onClick={handelLeftContent}
-            className=" cursor-pointer pt-[40px] md:w-[9px] md:pt-[25px] sm:hidden sl:hidden"
+            className=" cursor-pointer pt-[40px] md:w-[9px] md:pt-[25px]"
             src={left_arror}
           />
         </div>
@@ -107,7 +107,7 @@ function Quotecard() {
           <img
             alt=""
             onClick={handelRightContent}
-            className="pt-[40px] cursor-pointer md:w-[9px] md:pt-[25px] sm:hidden sl:hidden "
+            className="pt-[40px] cursor-pointer md:w-[9px] md:pt-[25px] "
             src={right_arror}
           />
         </div>
