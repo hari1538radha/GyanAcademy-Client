@@ -39,7 +39,7 @@ const CourseVideoPage = () => {
       </div>
       <div className="flex flex-col justify-center items-center w-screen">
         <div>
-          <BackNavigation Path={path} Navigation={"Javascript"} />
+          <BackNavigation Path={path} navigation={"Javascript"} />
         </div>
         <div className="md:w-[768px] sm:w-[310px] xl:w-[1020px] sl:w-[470px]">
           <div className="flex flex-start w-[1170px] md:w-[668px] sm:w-[310px] sm:mt-[-35px] xl:w-[1020px] sl:w-[470px]">

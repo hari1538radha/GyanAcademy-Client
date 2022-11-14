@@ -14,12 +14,12 @@ function CourseHeader() {
             <span className="ml-12 h-full border-b-[3px] border-[#9D1C7F] p-[5px] text-[#9D1C7F] xl:ml-8 sm:ml-0 sl:ml-0">
               <h3>{obj}</h3>
             </span>
-            <span className="ml-12 h-full p-[5px] sm:ml-0 ">
+            {/* <span className="ml-12 h-full p-[5px] sm:ml-0 ">
               <h3>Highly Rated</h3>
             </span>
             <span className="ml-12 h-full p-[5px] sm:ml-0 ">
               <h3>New</h3>
-            </span>
+            </span> */}
           </div>
         ))}
       </div>

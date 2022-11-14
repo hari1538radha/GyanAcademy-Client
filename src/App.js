@@ -17,14 +17,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} exact></Route>
-        <Route path="/coursevideo" element={<CourseVideoPage />}></Route>
-        <Route path="/Courses" element={<CoursePage />}></Route>
-        <Route path="/applicationform" element={<ApplicationForm />}></Route>
-        <Route path="/courselibrary" element={<CourseLibrary />} exact></Route>
+        <Route path="/course/content" element={<CourseVideoPage />}></Route>
+        <Route path="/course/list" element={<CoursePage />}></Route>
+        <Route path="/apply" element={<ApplicationForm />}></Route>
+        <Route path="/course" element={<CourseLibrary />} exact></Route>
         <Route path="/gallery" element={<GalleryPage />} exact></Route>
       </Routes>
       <Footer />
-
     </div>
   );
 }

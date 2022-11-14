@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const GetStarted = () => {
   const Navigate = useNavigate();
   const handelGetStarted = () => {
-    Navigate("/applicationform");
+    Navigate("/apply");
   };
   return (
     <div>
