@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect ,useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 import courses from "./JSON/data.json";
@@ -8,7 +8,11 @@ const CourseLibraryCard = () => {
   const handelPages = (courseAvailable) => {
     Navigate("/course/list", { state: courseAvailable });
   };
+ const[corsesDisplayed ,setDisplayedcourses] =useState(courses)
+ useEffect(() =>
+ {
 
+ })
   return (
     <div>
       <div className="flex justify-center bg-gradient-to-b from-[#E1F3FF] to-[#E4D7FF]">

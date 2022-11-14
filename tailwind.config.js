@@ -49,6 +49,9 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
     },
+    backgroundSize: {
+      "size-200": "200% 200%",
+    },
   },
   plugins: [],
 };
