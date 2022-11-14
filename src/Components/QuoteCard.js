@@ -14,15 +14,7 @@ import sriram from "../GyanAcademyPages/HomePage/asserts/Sriram.png";
 
 function Quotecard() {
   const [indexTo, setIndexTo] = useState(0);
-  useEffect(() => {
-    setTimeout(() => {
-      if (indexTo == 4) {
-        setIndexTo(0);
-      } else {
-        setIndexTo(indexTo + 1);
-      }
-    }, 6000);
-  }, [indexTo]);
+
   const Quotes = [
     {
       discription:
