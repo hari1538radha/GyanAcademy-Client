@@ -26,7 +26,7 @@ function Header() {
         <div className="flex sl:gap-[10px] items-center sm:gap-[10px]">
           <div className="pt-[23px] pb-[22px] pr-[30px] text-[16.46px] text-[#2B2A85] md:pr-[30px] md:text-[14px] sl:text-[12px] sl:pt-0 sl:pb-0 sl:pr-[0px]  sm:text-[10px] sm:pr-[0px]">
             <ul className="flex gap-[30px] md:gap-[27px] sl:gap-[10px] sm:gap-[20px] ">
-              <a className="sl:h-[13px] sm:h-[13px]" href="/courselibrary">BootCamps</a>
+              <a className="sl:h-[13px] sm:h-[13px]" href="/course">BootCamps</a>
               <a className="sl:h-[13px] sm:h-[13px]" href="/gallery">Gallery</a>
               {/* <a className="sm:h-[12px] sm:w-[93px]" href="">Learning Path</a>
               <a className="sm:h-[12px] sm:w-[51px]" href="">Pricing</a>

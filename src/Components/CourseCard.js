@@ -7,11 +7,9 @@ import ratings from "../GyanAcademyPages/coursePage/asserts/star.png";
 
 const CourseCard = (props) => {
   const Navigate = useNavigate();
-  console.log(props);
   const courseList = props.courseList;
-  console.log(courseList);
 
-  const handelCoursevideo = (
+  const handelCourseVideo = (
     tasks,
     tutor,
     description,
@@ -19,7 +17,7 @@ const CourseCard = (props) => {
     title,
     learningTags
   ) => {
-    Navigate("/coursevideo", {
+    Navigate("/course/content", {
       state: {
         courseLists: courseList,
         tasks: tasks,
@@ -70,7 +68,7 @@ const CourseCard = (props) => {
                 </p>
                 <button
                   onClick={() =>
-                    handelCoursevideo(
+                    handelCourseVideo(
                       obj.courseVideos,
                       obj.courseTutor,
                       obj.courseDescription,
@@ -80,7 +78,7 @@ const CourseCard = (props) => {
                   }
                   className="border-[2px] w-[174px] h-[42px] rounded-[25px] border-[#9D1C7F] left-[180px] relative sm:left-[30px] sm:mt-[20px] sl:left-[40px] sl:mt-[20px]"
                 >
-                  Enroll
+                  View content
                 </button>
               </div>
             </div>

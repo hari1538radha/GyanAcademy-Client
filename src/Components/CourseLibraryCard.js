@@ -6,7 +6,7 @@ courses = courses.courses;
 const CourseLibraryCard = () => {
   const Navigate = useNavigate();
   const handelPages = (courseAvailable) => {
-    Navigate("/Courses", { state: courseAvailable });
+    Navigate("/course/list", { state: courseAvailable });
   };
 
   return (
@@ -50,7 +50,7 @@ const CourseLibraryCard = () => {
                       className="border-[2px] w-[174px] h-[42px] rounded-[25px] shadow-md xl:flex justify-center items-center sm:w-[136px] sm:h-[35px]"
                       style={{ borderColor: `${obj.color}` }}
                     >
-                      Enroll
+                      Start
                     </button>
                   </div>
                 </div>

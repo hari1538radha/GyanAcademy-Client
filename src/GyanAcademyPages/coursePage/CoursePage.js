@@ -18,7 +18,7 @@ function CoursePage() {
       </div>
       <div className="flex flex-col justify-center items-center w-screen">
         <div>
-          <BackNavigation Navigation={"Course Library"} />
+          <BackNavigation navigation={"Course Library"} />
         </div>
         <div>
           <Search />
