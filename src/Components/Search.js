@@ -9,6 +9,7 @@ const Search = () => {
     e.preventDefault();
     console.log(e.target.elements[0].value) 
   }
+
   return (
     <div>
       <div className="relative w-[1170px] md:w-[736px] xl:w-[955px] sm:w-[300px] sl:w-[400px]">

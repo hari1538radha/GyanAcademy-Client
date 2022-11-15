@@ -31,7 +31,7 @@ const CourseCard = (props) => {
   };
 
   return (
-    <div className="sm:w-[100%] sl:w-[480px] xl:w-[1025px]">
+    <div className="sm:w-[100%] sl:w-[480px] xl:w-[1025px] flex flex-col items-center justify-center">
       <div className=" max-h-[1515px] w-[800px] flex flex-col justify-center overflow-y-scroll no-scrollbar md:w-[760px] sm:w-[100%] sl:w-[100%] xl:w-[100%] ">
         {courseList?.length > 0 &&
           courseList.map((obj) => (
