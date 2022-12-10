@@ -35,7 +35,7 @@ const CourseCard = (props) => {
       <div className=" max-h-[1515px] w-[800px] flex flex-col justify-center overflow-y-scroll no-scrollbar md:w-[760px] sm:w-[100%] sl:w-[100%] xl:w-[100%] ">
         {courseList?.length > 0 &&
           courseList.map((obj,key) => (
-            <div key={key} className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl bg-[#FFFFFF] rounded-[25px] my-[50px] md:w-[760px] sm:w-[100%] sm:flex-col  sm:mt-[100px] sm:h-[5%] sm:mt[10%] sl:flex-col sl:w-[480px] sl:h-[100%] sl:p-[10px] sl:pl-[10px] xl:ml-[13%]">
+            <div key={`index=${key}`} className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl bg-[#FFFFFF] rounded-[25px] my-[50px] md:w-[760px] sm:w-[100%] sm:flex-col  sm:mt-[100px] sm:h-[5%] sm:mt[10%] sl:flex-col sl:w-[480px] sl:h-[100%] sl:p-[10px] sl:pl-[10px] xl:ml-[13%]">
               <img
                 src={preview}
                 className="p-[24px] sm:h-[270px] sm:p-[9px] sm:w-[100%] sl:w-[400px] sl:h-[300px] sl:ml-[30px]"
