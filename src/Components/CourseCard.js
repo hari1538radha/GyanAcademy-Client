@@ -34,11 +34,12 @@ const CourseCard = (props) => {
     <div className="sm:w-[100%] sl:w-[480px] xl:w-[1025px] flex flex-col items-center justify-center">
       <div className=" max-h-[1515px] w-[800px] flex flex-col justify-center overflow-y-scroll no-scrollbar md:w-[760px] sm:w-[100%] sl:w-[100%] xl:w-[100%] ">
         {courseList?.length > 0 &&
-          courseList.map((obj) => (
-            <div className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl bg-[#FFFFFF] rounded-[25px] my-[50px] md:w-[760px] sm:w-[100%] sm:flex-col  sm:mt-[100px] sm:h-[5%] sm:mt[10%] sl:flex-col sl:w-[480px] sl:h-[100%] sl:p-[10px] sl:pl-[10px] xl:ml-[13%]">
+          courseList.map((obj,key) => (
+            <div key={key} className="flex flex-row max-w-[760px] h-[280px] drop-shadow-xl bg-[#FFFFFF] rounded-[25px] my-[50px] md:w-[760px] sm:w-[100%] sm:flex-col  sm:mt-[100px] sm:h-[5%] sm:mt[10%] sl:flex-col sl:w-[480px] sl:h-[100%] sl:p-[10px] sl:pl-[10px] xl:ml-[13%]">
               <img
                 src={preview}
                 className="p-[24px] sm:h-[270px] sm:p-[9px] sm:w-[100%] sl:w-[400px] sl:h-[300px] sl:ml-[30px]"
+                alt="img"
               />
               <div className="flex flex-col justify-between p-[24px]">
                 <h2 className="border-l-[4px] border-[#9D1C7F] pl-[7px] text-[20px] font-semibold sm:h-[40px] sm:mt-[15px] sm:text-[20px] sl:h-[40px] sl:text-[25px] ">
@@ -56,11 +57,11 @@ const CourseCard = (props) => {
                   </li>
                 </div>
                 <div className="flex flex-row items-center sm:h-[40px]">
-                  <img src={profile} className="mr-[7px]" />
-                  <p className="mr-[15px] text-[12px] font-medium">
+                  <img src={profile} className="mr-[7px]" alt="img" />
+                  <p className="mr-[15px] text-[12px] font-medium" alt="img">
                     {obj.courseTutor}
                   </p>
-                  <img src={ratings} className="h-[11px] w-[11px] mr-[5px]" />
+                  <img src={ratings} className="h-[11px] w-[11px] mr-[5px]" alt="img"/>
                   <p className="text-[12px] font-medium">{obj.courseRatings}</p>
                 </div>
                 <p className="text-[14px] font-normal sm:mt-[15px] sl:mt-[10px]">

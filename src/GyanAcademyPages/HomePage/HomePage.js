@@ -68,7 +68,7 @@ const HomePage = () => {
             </button>
           </div>
           <img
-            alt=""
+            alt="img"
             className=" h-[500px] md:h-[264px] md:w-[311px] sm:h-[223px] sm:w-[360px] sl:w-[480px] sl:h-[400px] xl:h-[400px] xl:w-[450px]  "
             src={sample1}
           />
@@ -78,12 +78,12 @@ const HomePage = () => {
       <div className="w-screen h-[430px] bg-gradient-to-b from-[#282B85E5]  to-[#9A1D80E5] md:h-[200px] sm:bg-gradient-to-l sm:h-[601px] sl:bg-gradient-to-l sl:h-[601px] ">
         <div className=" text-white justify-center pt-[108px] flex gap-[50px] md:pt-[15px] md:gap-[31px] sm:pt-[35px] sm:flex-col sm:gap-[21px] sm:items-center sl:pt-[35px] sl:flex-col sl:gap-[21px] sl:items-center xl:gap-[20px]">
           {card?.length > 0 &&
-            card.map((obj) => (
-              <div className=" rounded-[22px] shadow-home_box bg-gradient-to-br from-[#FFFFFF66] to-[#00000000] backdrop-blur-[14px] w-[371px] h-[214px] md:w-[224px] md:h-[120px] sm:h-[162px] sm:w-[282px] sl:h-[162px] sl:w-[282px] xl:w-[290px] ">
+            card.map((obj,key) => (
+              <div key={key} className=" rounded-[22px] shadow-home_box bg-gradient-to-br from-[#FFFFFF66] to-[#00000000] backdrop-blur-[14px] w-[371px] h-[214px] md:w-[224px] md:h-[120px] sm:h-[162px] sm:w-[282px] sl:h-[162px] sl:w-[282px] xl:w-[290px] ">
                 <div className=" inline-flex flex-col gap-[20px] pl-[25px] pt-[23px] md:gap-[13px] md:pt-[15px] sm:pt-[21px] sm:pl-[19px] sm:gap-[12px] sl:pt-[21px] sl:pl-[19px] sl:gap-[12px] ">
                   <div className="flex gap-[14px] md:gap-[8px] sm:gap-[10px] sm:items-center sl:gap-[10px] sl:items-center">
                     <img
-                      alt=""
+                      alt="img"
                       className=" md:w-[21px] md:h-[16px] sm:w-[26px] sm:h-[22px] sl:w-[26px] sl:h-[22px] "
                       src={obj.img}
                     />
@@ -105,7 +105,7 @@ const HomePage = () => {
       <div className="h-[938px] sm:h-[1440px] sl:h-[1440px] w-screen bg-gradient-to-br from-[#E4D7FF] via-[#D8E7FF] to-[#BCFFDF] flex justify-center md:h-[600px] sm:bg-none  ">
         <div className="w-[1440px] xl:w-[1025px] md:w-[800px] sl:w-[480px] sm:w-[360px] sm:flex sm:flex-col sm:items-center sl:flex sl:flex-col sl:items-center ">
           <img
-            alt=""
+            alt="img"
             className=" mt-[-46px] float-right h-[438px] w-[561px] xl:h-[360px] xl:w-[450px] md:h-[260px] md:w-[307px] md:mt-[-30px] sm:mt-0 sm:h-[257px] sm:w-[329px] sm:float-none sl:mt-0 sl:h-[257px] sl:w-[329px] sl:float-none "
             src={sample2}
           />
@@ -138,7 +138,7 @@ const HomePage = () => {
 
           <div className=" pt-[58px] pr-[256px] flex justify-between xl:pr-[100px] md:pr-[70px] sm:flex-col sm:pt-[28px] sm:gap-[21px] sm:pr-0 sm:items-center sl:flex-col sl:pt-[28px] sl:gap-[21px] sl:pr-0 sl:items-center ">
             <img
-              alt=""
+              alt="img"
               className=" mt-[26px] float-left h-[510px] w-[611px] xl:h-[360px] xl:w-[450px] md:w-[322px] md:h-[332px] md:mt-[-10px] sm:mt-0 sm:h-[257px] sm:w-[329px] sm:float-none sl:mt-0 sl:h-[257px] sl:w-[329px] sl:float-none "
               src={sample3}
             />

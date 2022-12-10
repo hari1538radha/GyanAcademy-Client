@@ -1,6 +1,4 @@
-import { data } from "autoprefixer";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 //asserts
 import search from "../GyanAcademyPages/coursePage/asserts/search.png";
 const Search = () => {
@@ -24,7 +22,8 @@ const Search = () => {
           sm:w-[300px] sm:h-[29px] sm:ml-0 sm:p-[10px] sm:rounded-[6px] sm:text-[10px]"
         />
         <button>
-        <img
+        <img 
+        alt="img"
           src={search}
           className="absolute top-[36%] cursor-pointer left-[95%]
           sm:w-[14px] sm:h-[14px] sm:top-[35%] sm:left-[93%]

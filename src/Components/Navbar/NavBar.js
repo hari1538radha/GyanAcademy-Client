@@ -14,7 +14,7 @@ function Header() {
       <div className="justify-between items-center w-screen h-[72px] shadow-header_box flex pl-[147px] md:pl-[36px] sl:h-[36px] sl:pl-[17px] sm:h-[36px] sm:pl-[17px] xl:pl-[90px] ">
         <div className="flex items-center justify-center sl:pt-[4px] sm:pt-[4px]">
           <img
-            alt=""
+            alt="img"
             src={Logo}
             className="pr-3 sl:pr-[5px] sl:h-[20px] sm:pr-[5px] sm:h-[20px]"
           />

@@ -50,12 +50,12 @@ function GalleryPage() {
         </div>
         <div className='columns-2 row-2 gap-[15px] sm:columns-1'>
         {
-            data.map((obj) => {
+            data.map((obj,key) => {
                 return (
 
-                        <div className='w-full h-full overflow-hidden mb-[10px] rounded-[10px] sm:rounded-[5px]'>
+                        <div key={key} className='w-full h-full overflow-hidden mb-[10px] rounded-[10px] sm:rounded-[5px]'>
 
-                        <img src={obj.imgsrc} alt='' className='w-full h-full rounded-[10px] ease-out duration-[2000ms] hover:scale-110 sm:rounded-[5px]' />
+                        <img src={obj.imgsrc} alt="img" className='w-full h-full rounded-[10px] ease-out duration-[2000ms] hover:scale-110 sm:rounded-[5px]' />
 
 
                     </div>

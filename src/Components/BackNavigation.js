@@ -17,6 +17,7 @@ const BackNavigation = ({navigation}) => {
           <img
             src={path}
             className=" mr-2 pl-2 md:w-[15px] sm:w-[13px] xl:w-[18px] sl:w-[4%] "
+            alt="arrow"
           />
           <h3
             className="text-[20px] mb-[2px] font-medium ml-[10px] md:text-[15px] xl:w-[1020px] xl:text-[18px] sl:w-[470px] sl:text-[17px]
