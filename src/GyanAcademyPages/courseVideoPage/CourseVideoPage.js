@@ -3,8 +3,6 @@ import { useLocation } from "react-router-dom";
 //components
 import HeaderBanner from "../../Components/HeaderBanner";
 import BackNavigation from "../../Components/BackNavigation";
-//JSON
-import courses from "../../Components/JSON/data.json";
 //asserts
 import backimage from "./asserts/backimage.svg";
 import path from "./asserts/Path.svg";
@@ -27,17 +25,17 @@ const CourseVideoPage = () => {
       `${event.target.id}-videos`
     );
     selectedElement.style.display =
-      selectedElement.style.display == "block" ? "none" : "block";
+      selectedElement.style.display === "block" ? "none" : "block";
   };
   return (
-    <div>
+    <div className=" bg-gradient-to-b from-[#E1F3FF] to-[#E4D7FF]">
       <div>
         <HeaderBanner
           bgImg={backimage}
           BannerText="Learn Merge Sort in JavaScript"
         />
       </div>
-      <div className="flex flex-col justify-center items-center w-screen">
+      <div className="flex flex-col justify-center  items-center w-screen">
         <div>
           <BackNavigation Path={path} navigation={"Javascript"} />
         </div>
@@ -51,6 +49,7 @@ const CourseVideoPage = () => {
           <div className="mt-10 flex items-center mb-10 md:mt-[10px] md:ml-[4%] sm:w-[310px] sm:mt-[15px] sm:ml-[2%] xl:w-[1020] sl:w-[470px] ">
             <img
               className="mr-3  md:w-[22px] sm:w-[24px] xl:w-[30px] xl:ml-[3%] sl:w-[30px]"
+              alt="img"
               src={userprofile}
             ></img>
             <p className="mr-10 opacity-60 font-semibold text-[22px] md:text-[12px] xl:w-[1020px] sm:text-[12px] xl:text-[20px] sl:w-[470px] sl:text-[20px]">
@@ -58,6 +57,7 @@ const CourseVideoPage = () => {
             </p>
             <img
               className="mr-3 md:w-[11px] md:ml-[-25px] sm:w-[13px] sm:ml-[-30px] xl:w-[20px] xl:ml-[-60%] sl:w-[15px] sl:ml-[-25%]" 
+              alt="img"
               src={Ratings}
             ></img>
             <p className="md:text-[11px] sm:text-[12px] xl:w-[1020px] sl:w-[470px] sl:text-[20px]">
@@ -72,17 +72,18 @@ const CourseVideoPage = () => {
         <div className=" flex flex-col justify-center items-center mt-16 gap-y-6 md:mt-[35px] sm:w-[310px] sm:mt-[50px] xl:w-[1020px] sl:w-[470px] ">
           {tasks.length &&
             tasks.map((obj, index) => (
-              <div className="mb-[26px] sm:w-[310px] sm:mt-[-40px] xl:w-[1020px] xl:mt-[-30px] sl:w-[470px] sl:mt-[-35px]">
+              <div index={index} className="mb-[26px] sm:w-[310px] sm:mt-[-40px] xl:w-[1020px] xl:mt-[-30px] sl:w-[470px] sl:mt-[-35px]">
                 <div
-                  className="flex cursor-pointer group focus:rounded-none items-center justify-start w-[1168px] border-2 border-gray-200 h-24 rounded-t-[20px] md:h-[60px] md:h-[60px] md:w-[735px] md:ml-[10px] md:mt-[-25px] sm:w-[310px] sm:h-[40px] xl:w-[1020px] xl:h-[70px] sl:w-[470px] sl:h-[60px]"
+                  className="flex cursor-pointer group focus:rounded-none items-center justify-start w-[1168px] border-2 border-gray-400 h-24 rounded-t-[20px] md:h-[60px] md:h-[60px] md:w-[735px] md:ml-[10px] md:mt-[-25px] sm:w-[310px] sm:h-[40px] xl:w-[1020px] xl:h-[70px] sl:w-[470px] sl:h-[60px]"
                   id={`index-${index}`}
-                  // style={{ borderTopLeftRadius:"20px",borderTopRigthRadius:"20px", focus:"green" }}
+    
                   onClick={(event) => {
                     onClickHandler(event);
                   }}
                 >
                   <img
-                    className="ml-[35px] mr-[31px] md:w-[15px] md:w-[10px] sm:w-[2%] xl:w-[10px] sl:w-[8px]"
+                    className="ml-[35px]  mr-[31px] md:w-[15px] md:w-[10px] sm:w-[2%] xl:w-[10px] sl:w-[8px]"
+                    alt="img"
                     src={icon}
                   ></img>
                   <p className="font-medium text-[22px] md:text-[14px] sm:text-[12px] xl:w-[1020px] xl:text-[18px] sl:w-[470px] sl:text-[20px]">
@@ -94,10 +95,11 @@ const CourseVideoPage = () => {
                   id={`index-${index}-videos`}
                 >
                   {obj.taskItems.length &&
-                    obj.taskItems.map((obj) => (
-                      <div className="flex items-center justify-start w-[1168px] border-2 border-gray-200 h-24 first:rounded-t-none last:rounded-b-lg md:ml-[10px] md:w-[735px] md:h-[60px] sm:w-[310px] sm:h-[40px] xl:w-[1020px sl:w-[470px] sl:h-[60px] xl:w-[1025px]">
+                    obj.taskItems.map((obj,key) => (
+                      <div key={key}className="flex items-center justify-start w-[1168px] border-2 border-t-0 border-gray-400 h-24 first:rounded-t-none last:rounded-b-lg md:ml-[10px] md:w-[735px] md:h-[60px] sm:w-[310px] sm:h-[40px] xl:w-[1020px sl:w-[470px] sl:h-[60px] xl:w-[1025px]">
                         <img
                           className="ml-[35px] mr-[31px] md:w-[15px] sm:w-[310px] sm:w-[4%] xl:w-[2%] sl:w-[4%]"
+                          alt="img"
                           src={vedioPlayer}
                         ></img>
                         <p className="font-medium text-[22px] md:text-[14px] sm:text-[12px] xl:w-[1020px] xl:text-[18px] sl:w-[470px] sl:text-[20px]">
@@ -116,8 +118,8 @@ const CourseVideoPage = () => {
               {
                 <div className="w-[50%] flex flex-wrap gap-x-6 gap-y-5 md:w-[768px] sm:w-[310px] sm:mt-[-25px] xl:w-[800px] sl:w-[470px] sl:mt-[-10px]  sl:h-[60px] ">
                   {learningTags.length > 0 &&
-                    learningTags.map((obj) => (
-                      <div className=" gap-5 px-6 h-12 flex items-center justify-center rounded-3xl bg-gradient-to-b from-[#3F6AB833] cursor-pointer to-[#903F981F] md:ml-[20px] sm:h-[20px] sm:mt-[-5px] sl:h-[60px]">
+                    learningTags.map((obj,key) => (
+                      <div key={key} className=" gap-5 px-6 h-12 flex items-center justify-center rounded-3xl hover:text-white hover:bg-[#a8168b] cursor-pointer bg-gradient-to-br to-[#282B85] via-[#903F981F] from-[#456ebb57] bg-size-200 hover:bg-right-bottom transition-all duration-500 md:ml-[20px] sm:h-[20px] sm:mt-[-5px] sl:h-[60px]">
                         <p className="md:text-[14px] sm:text-[12px] xl:text-[18px]">
                           {obj}
                         </p>

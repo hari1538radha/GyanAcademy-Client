@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
  import AWS from "aws-sdk";
-import axios, * as others from "axios";
+import axios from "axios";
 import successTick from "./asserts/animated-check.gif";
 
 axios.defaults.headers.post["Content-Type"] = "text/plain";
@@ -61,7 +61,7 @@ const ApplicationForm = () => {
     const mobileNumber = ele[3].value;
     const qualification = ele[4].value;
     const category = ele[5].value;
-    const resumeFile = ele[6].files;
+    
     const formData = {
       Firstname: firstName,
       Lastname: lastName,
@@ -102,8 +102,8 @@ const ApplicationForm = () => {
         </div>
 
         <div className="flex flex-row flex-wrap w-[756px] gap-x-10 mb-[40px] md:justify-center md:gap-x-4 sl:gap-x-0 sl:w-[700px] sl:justify-center sm:gap-x-0 sm:w-screen sm:justify-center ">
-          {fields.map((obj) => (
-            <div className="w-[358px] text-[16px] font-normal sm:text-[9px] sm:w-[250px]">
+          {fields.map((obj,key) => (
+            <div key={key} className="w-[358px] text-[16px] font-normal sm:text-[9px] sm:w-[250px]">
               <label className=" font-semibold text-[#484B4D] mb-[10px]">
                 {obj[0]}
               </label>
@@ -138,7 +138,7 @@ const ApplicationForm = () => {
           <div className="flex items-center justify-center">
             <div>
               {progress === 100 && (
-                <img className="w-10 h-10 mr-2" src={successTick}></img>
+                <img className="w-10 h-10 mr-2" src={successTick} alt="img"></img>
               )}
             </div>
             <div>{progress === 100 && <div>File Uploded</div>}</div>

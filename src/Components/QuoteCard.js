@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import left_arror from "../GyanAcademyPages/HomePage/asserts/left_arror.png";
 import right_arror from "../GyanAcademyPages/HomePage/asserts/rightarrow.png";
 import quote from "../GyanAcademyPages/HomePage/asserts/fa-quote-left.png";
-import user from "../GyanAcademyPages/HomePage/asserts/Mask.png";
 import senthamizlharasu from "../GyanAcademyPages/HomePage/asserts/Senthamizharasu.png";
 import vetrivel from "../GyanAcademyPages/HomePage/asserts/Vetrivel.png";
 
@@ -58,7 +57,7 @@ function Quotecard() {
 
       console.log(indexTo);
     }
-    if (indexTo == 4) {
+    if (indexTo === 4) {
       setIndexTo(0);
     }
   };
@@ -74,18 +73,20 @@ function Quotecard() {
       <div className="pt-[86px] flex gap-[140px] justify-center md:pt-[75px] md:gap-[100px] sm:pt-0 sl:pt-0 xl:gap-[100px] ">
         <div>
           <img
-            alt=""
+            alt="img"
             onClick={handelLeftContent}
             className=" cursor-pointer pt-[40px] md:w-[9px] md:pt-[25px]"
+            
             src={left_arror}
-          />
+           
+       />
         </div>
         {Quotes.length > 0 &&
-          qoutes.map((obj) => (
+          qoutes.map((obj,key) => (
 
-            <div className="flex flex-col gap-[62px] md:gap-[18px] sm:gap-[26px] sm:flex-col-reverse sm:w-screen sl:gap-[26px] sl:flex-col-reverse sl:w-screen ">
+            <div key={key} className="flex flex-col gap-[62px] md:gap-[18px] sm:gap-[26px] sm:flex-col-reverse sm:w-screen sl:gap-[26px] sl:flex-col-reverse sl:w-screen ">
               <div className="flex gap-[62px] md:gap-[30px] sm:gap-4 sm:justify-center sl:gap-4 sl:justify-center xl:gap-[40px]">
-                <img alt="" className="h-[26px] w-[38px] md:h-[26px] md:w-[21px]" src={quote} />
+                <img alt="img" className="h-[26px] w-[38px] md:h-[26px] md:w-[21px]" src={quote} />
 
                 <div className="">
                   <p className="w-[693px] text-[#1E0E62] text-[22px] font-medium md:h-[172px] md:w-[369px] md:text-[13px] sm:h-[210px] sm:w-[282px] sm:text-[12px] sl:h-[300px] sl:w-[282px] sl:text-[15px] xl:w-[500px] xl:text-[15px] ">
@@ -95,7 +96,7 @@ function Quotecard() {
 
               </div>
               <div className=" flex justify-start items-center gap-[17px] pl-[100px] md:gap-[9px] md:pl-[52px] sl:pl-0 sm:pl-0 xl:pl-[78px] ">
-                <img alt="" className="h-20 w-20 rounded-full md:h-[40px] md:w-[40px] sl:h-[60px] sl:w-[60px] sm:h-[60px] sm:w-[60px] " src={obj.image} />
+                <img alt="img" className="h-20 w-20 rounded-full md:h-[40px] md:w-[40px] sl:h-[60px] sl:w-[60px] sm:h-[60px] sm:w-[60px] " src={obj.image} />
                 <p className=" text-[14px] text-[#151439] opacity-[0.7] md:text-[11px]">
                   {obj.Author} <p>- {obj.field}</p>
                 </p>
@@ -105,7 +106,7 @@ function Quotecard() {
 
         <div>
           <img
-            alt=""
+            alt="img"
             onClick={handelRightContent}
             className="pt-[40px] cursor-pointer md:w-[9px] md:pt-[25px] "
             src={right_arror}

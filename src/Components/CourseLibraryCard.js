@@ -8,7 +8,7 @@ const CourseLibraryCard = () => {
   const handelPages = (courseAvailable) => {
     Navigate("/course/list", { state: courseAvailable });
   };
-
+ 
   return (
     <div>
       <div className="flex justify-center bg-gradient-to-b from-[#E1F3FF] to-[#E4D7FF]">
@@ -18,8 +18,8 @@ const CourseLibraryCard = () => {
         sl:gap-5 sl:w-[720px]
         sm:gap-4">
           {courses.length > 0 &&
-            courses.map((obj) => (
-              <div className="pt-[55px] md:pt-[15px] xl:pt-[10px] sm:pt-[25px] sl:pt-[25px]">
+            courses.map((obj,key) => (
+              <div key={key} className="pt-[55px] md:pt-[15px] xl:pt-[10px] sm:pt-[25px] sl:pt-[25px]">
                 <div className="w-[356px] h-[236px] shadow-md shadow-gray-300 bg-white rounded-[25px] xl:w-[430px] sm:w-[287px] sl:items-center justify-center">
                   <div
                     className="z-0 relative w-[356px] h-[145px] text-white rounded-t-[25px] xl:w-[430px] sm:w-[287px]"
