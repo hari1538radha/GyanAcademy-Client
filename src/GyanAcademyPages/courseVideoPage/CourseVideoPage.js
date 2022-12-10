@@ -72,7 +72,7 @@ const CourseVideoPage = () => {
         <div className=" flex flex-col justify-center items-center mt-16 gap-y-6 md:mt-[35px] sm:w-[310px] sm:mt-[50px] xl:w-[1020px] sl:w-[470px] ">
           {tasks.length &&
             tasks.map((obj, index) => (
-              <div index={index} className="mb-[26px] sm:w-[310px] sm:mt-[-40px] xl:w-[1020px] xl:mt-[-30px] sl:w-[470px] sl:mt-[-35px]">
+              <div key={index} className="mb-[26px] sm:w-[310px] sm:mt-[-40px] xl:w-[1020px] xl:mt-[-30px] sl:w-[470px] sl:mt-[-35px]">
                 <div
                   className="flex cursor-pointer group focus:rounded-none items-center justify-start w-[1168px] border-2 border-gray-400 h-24 rounded-t-[20px] md:h-[60px] md:h-[60px] md:w-[735px] md:ml-[10px] md:mt-[-25px] sm:w-[310px] sm:h-[40px] xl:w-[1020px] xl:h-[70px] sl:w-[470px] sl:h-[60px]"
                   id={`index-${index}`}
@@ -95,8 +95,8 @@ const CourseVideoPage = () => {
                   id={`index-${index}-videos`}
                 >
                   {obj.taskItems.length &&
-                    obj.taskItems.map((obj,key) => (
-                      <div key={key}className="flex items-center justify-start w-[1168px] border-2 border-t-0 border-gray-400 h-24 first:rounded-t-none last:rounded-b-lg md:ml-[10px] md:w-[735px] md:h-[60px] sm:w-[310px] sm:h-[40px] xl:w-[1020px sl:w-[470px] sl:h-[60px] xl:w-[1025px]">
+                    obj.taskItems.map((obj,index) => (
+                      <div key={index}className="flex items-center justify-start w-[1168px] border-2 border-t-0 border-gray-400 h-24 first:rounded-t-none last:rounded-b-lg md:ml-[10px] md:w-[735px] md:h-[60px] sm:w-[310px] sm:h-[40px] xl:w-[1020px sl:w-[470px] sl:h-[60px] xl:w-[1025px]">
                         <img
                           className="ml-[35px] mr-[31px] md:w-[15px] sm:w-[310px] sm:w-[4%] xl:w-[2%] sl:w-[4%]"
                           alt="img"
